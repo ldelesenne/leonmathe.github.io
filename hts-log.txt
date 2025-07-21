@@ -1,0 +1,263 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 25 Jun 2023 18:53:20 at https://leonmathe.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "fr, en, *" https://leonmathe.com/ -O1 "C:\Mes Sites Web\toto" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:53:39	Error: 	"Method Not Allowed" (405) at link https://leonmathe.com/xmlrpc.php (from https://leonmathe.com/)
+18:54:33	Error: 	"Not Found" (404) at link https://essaisleonmathe.files.wordpress.com/2017/08/site1-fileminimizer.jpg (from https://leonmathe.com/)
+18:57:07	Error: 	"Not Found" (404) at link https://leonmathe.com/?p=934 (from https://leonmathe.com/)
+18:57:17	Warning: 	Found for https://leonmathe.com/?share=twitter
+18:57:17	Warning: 	File has moved from https://leonmathe.com/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Histoire%20de%20MATHE%20et%20LEON&url=https%3A%2F%2Fleonmathe.com%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F&t=Histoire%20de%20MATHE%20et%20LEON
+18:57:18	Warning: 	Found for https://leonmathe.com/mathe/?share=twitter
+18:57:18	Warning: 	File has moved from https://leonmathe.com/mathe/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Math%C3%A9&url=https%3A%2F%2Fleonmathe.com%2Fmathe%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/mathe/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/mathe/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fmathe%2F&t=Math%C3%A9
+18:57:18	Warning: 	Found for https://leonmathe.com/notre-jeunesse/?share=twitter
+18:57:18	Warning: 	File has moved from https://leonmathe.com/notre-jeunesse/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20d%C3%A9buts&url=https%3A%2F%2Fleonmathe.com%2Fnotre-jeunesse%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/notre-jeunesse/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/notre-jeunesse/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnotre-jeunesse%2F&t=Nos%20d%C3%A9buts
+18:57:18	Warning: 	Found for https://leonmathe.com/le-tram-8/?share=twitter
+18:57:18	Warning: 	File has moved from https://leonmathe.com/le-tram-8/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Le%20tram%208&url=https%3A%2F%2Fleonmathe.com%2Fle-tram-8%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/le-tram-8/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/le-tram-8/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fle-tram-8%2F&t=Le%20tram%208
+18:57:18	Warning: 	Found for https://leonmathe.com/mamy/?share=twitter
+18:57:18	Warning: 	File has moved from https://leonmathe.com/mamy/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Mamy&url=https%3A%2F%2Fleonmathe.com%2Fmamy%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/mamy/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/mamy/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fmamy%2F&t=Mamy
+18:57:18	Warning: 	Found for https://leonmathe.com/moise-sauvee-des-eaux/?share=twitter
+18:57:18	Warning: 	File has moved from https://leonmathe.com/moise-sauvee-des-eaux/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Mo%C3%AFse%20sauv%C3%A9e%20des%20eaux&url=https%3A%2F%2Fleonmathe.com%2Fmoise-sauvee-des-eaux%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/moise-sauvee-des-eaux/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/moise-sauvee-des-eaux/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fmoise-sauvee-des-eaux%2F&t=Mo%C3%AFse%20sauv%C3%A9e%20des%20eaux
+18:57:18	Warning: 	Found for https://leonmathe.com/ldelesennegmailcom/?share=twitter
+18:57:18	Warning: 	File has moved from https://leonmathe.com/ldelesennegmailcom/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Escapade%20%C3%A0%20Paris&url=https%3A%2F%2Fleonmathe.com%2Fldelesennegmailcom%2F
+18:57:18	Warning: 	Found for https://leonmathe.com/ldelesennegmailcom/?share=facebook
+18:57:18	Warning: 	File has moved from https://leonmathe.com/ldelesennegmailcom/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fldelesennegmailcom%2F&t=Escapade%20%C3%A0%20Paris
+18:57:23	Warning: 	Found for https://leonmathe.com/la-ferme-de-courriere/?share=twitter
+18:57:23	Warning: 	File has moved from https://leonmathe.com/la-ferme-de-courriere/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=La%20ferme%20de%20Courri%C3%A8re&url=https%3A%2F%2Fleonmathe.com%2Fla-ferme-de-courriere%2F
+18:57:23	Warning: 	Found for https://leonmathe.com/la-ferme-de-courriere/?share=facebook
+18:57:23	Warning: 	File has moved from https://leonmathe.com/la-ferme-de-courriere/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fla-ferme-de-courriere%2F&t=La%20ferme%20de%20Courri%C3%A8re
+18:57:23	Warning: 	Found for https://leonmathe.com/nos-soirees/?share=twitter
+18:57:23	Warning: 	File has moved from https://leonmathe.com/nos-soirees/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20soir%C3%A9es&url=https%3A%2F%2Fleonmathe.com%2Fnos-soirees%2F
+18:57:23	Warning: 	Found for https://leonmathe.com/nos-soirees/?share=facebook
+18:57:23	Warning: 	File has moved from https://leonmathe.com/nos-soirees/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-soirees%2F&t=Nos%20soir%C3%A9es
+18:57:23	Warning: 	Found for https://leonmathe.com/notre-mariage/?share=twitter
+18:57:23	Warning: 	File has moved from https://leonmathe.com/notre-mariage/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Notre%20mariage&url=https%3A%2F%2Fleonmathe.com%2Fnotre-mariage%2F
+18:57:23	Warning: 	Found for https://leonmathe.com/notre-mariage/?share=facebook
+18:57:23	Warning: 	File has moved from https://leonmathe.com/notre-mariage/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnotre-mariage%2F&t=Notre%20mariage
+18:57:23	Warning: 	Found for https://leonmathe.com/nos-enfants/?share=twitter
+18:57:23	Warning: 	File has moved from https://leonmathe.com/nos-enfants/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20enfants&url=https%3A%2F%2Fleonmathe.com%2Fnos-enfants%2F
+18:57:23	Warning: 	Found for https://leonmathe.com/nos-enfants/?share=facebook
+18:57:23	Warning: 	File has moved from https://leonmathe.com/nos-enfants/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-enfants%2F&t=Nos%20enfants
+18:57:30	Warning: 	Found for https://leonmathe.com/roland/?share=twitter
+18:57:30	Warning: 	File has moved from https://leonmathe.com/roland/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Roland&url=https%3A%2F%2Fleonmathe.com%2Froland%2F
+18:57:30	Warning: 	Found for https://leonmathe.com/roland/?share=facebook
+18:57:30	Warning: 	File has moved from https://leonmathe.com/roland/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Froland%2F&t=Roland
+18:57:39	Warning: 	Found for https://leonmathe.com/ldelesennegmailcom-2/?share=twitter
+18:57:39	Warning: 	File has moved from https://leonmathe.com/ldelesennegmailcom-2/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Catherine&url=https%3A%2F%2Fleonmathe.com%2Fldelesennegmailcom-2%2F
+18:57:39	Warning: 	Found for https://leonmathe.com/ldelesennegmailcom-2/?share=facebook
+18:57:39	Warning: 	File has moved from https://leonmathe.com/ldelesennegmailcom-2/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fldelesennegmailcom-2%2F&t=Catherine
+18:57:39	Warning: 	Found for https://leonmathe.com/la-famille/?share=twitter
+18:57:39	Warning: 	File has moved from https://leonmathe.com/la-famille/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=La%20famille&url=https%3A%2F%2Fleonmathe.com%2Fla-famille%2F
+18:57:39	Warning: 	Found for https://leonmathe.com/la-famille/?share=facebook
+18:57:39	Warning: 	File has moved from https://leonmathe.com/la-famille/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fla-famille%2F&t=La%20famille
+18:57:44	Warning: 	Found for https://leonmathe.com/ma-belle-soeur/?share=twitter
+18:57:44	Warning: 	File has moved from https://leonmathe.com/ma-belle-soeur/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Ma%20belle%20s%C5%93ur&url=https%3A%2F%2Fleonmathe.com%2Fma-belle-soeur%2F
+18:57:44	Warning: 	Found for https://leonmathe.com/ma-belle-soeur/?share=facebook
+18:57:44	Warning: 	File has moved from https://leonmathe.com/ma-belle-soeur/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fma-belle-soeur%2F&t=Ma%20belle%20s%C5%93ur
+18:57:49	Warning: 	Found for https://leonmathe.com/mes-neveux-et-nieces/?share=twitter
+18:57:49	Warning: 	File has moved from https://leonmathe.com/mes-neveux-et-nieces/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Mes%20neveux%20et%20ni%C3%A8ces.&url=https%3A%2F%2Fleonmathe.com%2Fmes-neveux-et-nieces%2F
+18:57:49	Warning: 	Found for https://leonmathe.com/mes-neveux-et-nieces/?share=facebook
+18:57:49	Warning: 	File has moved from https://leonmathe.com/mes-neveux-et-nieces/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fmes-neveux-et-nieces%2F&t=Mes%20neveux%20et%20ni%C3%A8ces.
+18:57:49	Warning: 	Found for https://leonmathe.com/2023/01/04/les-romainville/?share=twitter
+18:57:49	Warning: 	File has moved from https://leonmathe.com/2023/01/04/les-romainville/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Romainville&url=https%3A%2F%2Fleonmathe.com%2F2023%2F01%2F04%2Fles-romainville%2F
+18:57:49	Warning: 	Found for https://leonmathe.com/2023/01/04/les-romainville/?share=facebook
+18:57:49	Warning: 	File has moved from https://leonmathe.com/2023/01/04/les-romainville/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2023%2F01%2F04%2Fles-romainville%2F&t=Les%20Romainville
+18:57:58	Warning: 	Found for https://leonmathe.com/les-wauthy/?share=twitter
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-wauthy/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Wauthy&url=https%3A%2F%2Fleonmathe.com%2Fles-wauthy%2F
+18:57:58	Warning: 	Found for https://leonmathe.com/les-wauthy/?share=facebook
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-wauthy/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-wauthy%2F&t=Les%20Wauthy
+18:57:58	Warning: 	Found for https://leonmathe.com/les-delesenne/?share=twitter
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-delesenne/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Delesenne&url=https%3A%2F%2Fleonmathe.com%2Fles-delesenne%2F
+18:57:58	Warning: 	Found for https://leonmathe.com/les-delesenne/?share=facebook
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-delesenne/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-delesenne%2F&t=Les%20Delesenne
+18:57:58	Warning: 	Found for https://leonmathe.com/les-everaert/?share=twitter
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-everaert/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Everaert&url=https%3A%2F%2Fleonmathe.com%2Fles-everaert%2F
+18:57:58	Warning: 	Found for https://leonmathe.com/les-everaert/?share=facebook
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-everaert/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-everaert%2F&t=Les%20Everaert
+18:57:58	Warning: 	Found for https://leonmathe.com/les-desmanet/?share=twitter
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-desmanet/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Desmanet&url=https%3A%2F%2Fleonmathe.com%2Fles-desmanet%2F
+18:57:58	Warning: 	Found for https://leonmathe.com/les-desmanet/?share=facebook
+18:57:58	Warning: 	File has moved from https://leonmathe.com/les-desmanet/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-desmanet%2F&t=Les%20Desmanet
+18:57:58	Warning: 	Found for https://leonmathe.com/nos-amis/?share=twitter
+18:57:58	Warning: 	File has moved from https://leonmathe.com/nos-amis/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20amis&url=https%3A%2F%2Fleonmathe.com%2Fnos-amis%2F
+18:57:58	Warning: 	Found for https://leonmathe.com/nos-amis/?share=facebook
+18:57:58	Warning: 	File has moved from https://leonmathe.com/nos-amis/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-amis%2F&t=Nos%20amis
+18:58:01	Warning: 	Found for https://leonmathe.com/francoise/?share=twitter
+18:58:01	Warning: 	File has moved from https://leonmathe.com/francoise/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Fran%C3%A7oise&url=https%3A%2F%2Fleonmathe.com%2Ffrancoise%2F
+18:58:01	Warning: 	Found for https://leonmathe.com/francoise/?share=facebook
+18:58:01	Warning: 	File has moved from https://leonmathe.com/francoise/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Ffrancoise%2F&t=Fran%C3%A7oise
+18:58:04	Warning: 	Found for https://leonmathe.com/nos-amis-charles-et-francoise/?share=twitter
+18:58:04	Warning: 	File has moved from https://leonmathe.com/nos-amis-charles-et-francoise/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Charles&url=https%3A%2F%2Fleonmathe.com%2Fnos-amis-charles-et-francoise%2F
+18:58:04	Warning: 	Found for https://leonmathe.com/nos-amis-charles-et-francoise/?share=facebook
+18:58:04	Warning: 	File has moved from https://leonmathe.com/nos-amis-charles-et-francoise/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-amis-charles-et-francoise%2F&t=Charles
+18:58:24	Warning: 	Found for https://leonmathe.com/claire-et-rene/?share=twitter
+18:58:24	Warning: 	File has moved from https://leonmathe.com/claire-et-rene/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Claire%20et%20Ren%C3%A9&url=https%3A%2F%2Fleonmathe.com%2Fclaire-et-rene%2F
+18:58:24	Warning: 	Found for https://leonmathe.com/claire-et-rene/?share=facebook
+18:58:24	Warning: 	File has moved from https://leonmathe.com/claire-et-rene/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fclaire-et-rene%2F&t=Claire%20et%20Ren%C3%A9
+18:58:24	Warning: 	Found for https://leonmathe.com/michel-et-michele/?share=twitter
+18:58:24	Warning: 	File has moved from https://leonmathe.com/michel-et-michele/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Michel%20et%20Mich%C3%A8le&url=https%3A%2F%2Fleonmathe.com%2Fmichel-et-michele%2F
+18:58:24	Warning: 	Found for https://leonmathe.com/michel-et-michele/?share=facebook
+18:58:24	Warning: 	File has moved from https://leonmathe.com/michel-et-michele/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fmichel-et-michele%2F&t=Michel%20et%20Mich%C3%A8le
+18:58:24	Warning: 	Found for https://leonmathe.com/jp-vuylsteke/?share=twitter
+18:58:24	Warning: 	File has moved from https://leonmathe.com/jp-vuylsteke/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=JP.Vuylsteke&url=https%3A%2F%2Fleonmathe.com%2Fjp-vuylsteke%2F
+18:58:24	Warning: 	Found for https://leonmathe.com/jp-vuylsteke/?share=facebook
+18:58:24	Warning: 	File has moved from https://leonmathe.com/jp-vuylsteke/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fjp-vuylsteke%2F&t=JP.Vuylsteke
+18:58:24	Warning: 	Found for https://leonmathe.com/nos-visiteurs/?share=twitter
+18:58:24	Warning: 	File has moved from https://leonmathe.com/nos-visiteurs/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=WK%20souvenirs&url=https%3A%2F%2Fleonmathe.com%2Fnos-visiteurs%2F
+18:58:24	Warning: 	Found for https://leonmathe.com/nos-visiteurs/?share=facebook
+18:58:24	Warning: 	File has moved from https://leonmathe.com/nos-visiteurs/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-visiteurs%2F&t=WK%20souvenirs
+18:58:24	Warning: 	Found for https://leonmathe.com/le-gers-2/?share=twitter
+18:58:24	Warning: 	File has moved from https://leonmathe.com/le-gers-2/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Le%20GERS&url=https%3A%2F%2Fleonmathe.com%2Fle-gers-2%2F
+18:58:24	Warning: 	Found for https://leonmathe.com/le-gers-2/?share=facebook
+18:58:24	Warning: 	File has moved from https://leonmathe.com/le-gers-2/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fle-gers-2%2F&t=Le%20GERS
+18:58:30	Warning: 	Found for https://leonmathe.com/les-branet/?share=twitter
+18:58:30	Warning: 	File has moved from https://leonmathe.com/les-branet/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Branet&url=https%3A%2F%2Fleonmathe.com%2Fles-branet%2F
+18:58:30	Warning: 	Found for https://leonmathe.com/les-branet/?share=facebook
+18:58:30	Warning: 	File has moved from https://leonmathe.com/les-branet/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-branet%2F&t=Les%20Branet
+18:58:30	Warning: 	Found for https://leonmathe.com/nos-voisins/?share=twitter
+18:58:30	Warning: 	File has moved from https://leonmathe.com/nos-voisins/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Bergouts&url=https%3A%2F%2Fleonmathe.com%2Fnos-voisins%2F
+18:58:30	Warning: 	Found for https://leonmathe.com/nos-voisins/?share=facebook
+18:58:30	Warning: 	File has moved from https://leonmathe.com/nos-voisins/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-voisins%2F&t=Les%20Bergouts
+18:58:30	Warning: 	Found for https://leonmathe.com/les-laberou/?share=twitter
+18:58:30	Warning: 	File has moved from https://leonmathe.com/les-laberou/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20Laberou&url=https%3A%2F%2Fleonmathe.com%2Fles-laberou%2F
+18:58:30	Warning: 	Found for https://leonmathe.com/les-laberou/?share=facebook
+18:58:30	Warning: 	File has moved from https://leonmathe.com/les-laberou/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-laberou%2F&t=Les%20Laberou
+18:58:32	Warning: 	Found for https://leonmathe.com/notre-gersification/?share=twitter
+18:58:32	Warning: 	File has moved from https://leonmathe.com/notre-gersification/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Notre%20Gersification&url=https%3A%2F%2Fleonmathe.com%2Fnotre-gersification%2F
+18:58:32	Warning: 	Found for https://leonmathe.com/notre-gersification/?share=facebook
+18:58:32	Warning: 	File has moved from https://leonmathe.com/notre-gersification/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnotre-gersification%2F&t=Notre%20Gersification
+18:58:36	Warning: 	Found for https://leonmathe.com/ball-trap-du-quinze-aout/?share=twitter
+18:58:36	Warning: 	File has moved from https://leonmathe.com/ball-trap-du-quinze-aout/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Ball%20Trap%20du%20quinze%20ao%C3%BBt&url=https%3A%2F%2Fleonmathe.com%2Fball-trap-du-quinze-aout%2F
+18:58:36	Warning: 	Found for https://leonmathe.com/ball-trap-du-quinze-aout/?share=facebook
+18:58:36	Warning: 	File has moved from https://leonmathe.com/ball-trap-du-quinze-aout/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fball-trap-du-quinze-aout%2F&t=Ball%20Trap%20du%20quinze%20ao%C3%BBt
+18:58:36	Warning: 	Found for https://leonmathe.com/2017/12/24/ldelesennegmailcom-mai-2000/?share=twitter
+18:58:36	Warning: 	File has moved from https://leonmathe.com/2017/12/24/ldelesennegmailcom-mai-2000/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=1%20Mai%202000&url=https%3A%2F%2Fleonmathe.com%2F2017%2F12%2F24%2Fldelesennegmailcom-mai-2000%2F
+18:58:36	Warning: 	Found for https://leonmathe.com/2017/12/24/ldelesennegmailcom-mai-2000/?share=facebook
+18:58:36	Warning: 	File has moved from https://leonmathe.com/2017/12/24/ldelesennegmailcom-mai-2000/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2017%2F12%2F24%2Fldelesennegmailcom-mai-2000%2F&t=1%20Mai%202000
+18:58:40	Warning: 	Found for https://leonmathe.com/nos-maisons/?share=twitter
+18:58:40	Warning: 	File has moved from https://leonmathe.com/nos-maisons/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20maisons&url=https%3A%2F%2Fleonmathe.com%2Fnos-maisons%2F
+18:58:45	Warning: 	Found for https://leonmathe.com/nos-maisons/?share=facebook
+18:58:45	Warning: 	File has moved from https://leonmathe.com/nos-maisons/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-maisons%2F&t=Nos%20maisons
+18:58:45	Warning: 	Found for https://leonmathe.com/de-farcienne-a-miramont-d-astarac/?share=twitter
+18:58:45	Warning: 	File has moved from https://leonmathe.com/de-farcienne-a-miramont-d-astarac/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=de%20Farcienne%20%C3%A0%20Miramont%20d%27%20Astarac&url=https%3A%2F%2Fleonmathe.com%2Fde-farcienne-a-miramont-d-astarac%2F
+18:58:45	Warning: 	Found for https://leonmathe.com/de-farcienne-a-miramont-d-astarac/?share=facebook
+18:58:45	Warning: 	File has moved from https://leonmathe.com/de-farcienne-a-miramont-d-astarac/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fde-farcienne-a-miramont-d-astarac%2F&t=de%20Farcienne%20%C3%A0%20Miramont%20d%27%20Astarac
+18:58:45	Warning: 	Found for https://leonmathe.com/nos-hobby/?share=twitter
+18:58:45	Warning: 	File has moved from https://leonmathe.com/nos-hobby/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20hobby&url=https%3A%2F%2Fleonmathe.com%2Fnos-hobby%2F
+18:58:45	Warning: 	Found for https://leonmathe.com/nos-hobby/?share=facebook
+18:58:45	Warning: 	File has moved from https://leonmathe.com/nos-hobby/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-hobby%2F&t=Nos%20hobby
+18:58:45	Warning: 	Found for https://leonmathe.com/ma-genealogie/?share=twitter
+18:58:45	Warning: 	File has moved from https://leonmathe.com/ma-genealogie/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Ma%20g%C3%A9n%C3%A9alogie&url=https%3A%2F%2Fleonmathe.com%2Fma-genealogie%2F
+18:58:45	Warning: 	Found for https://leonmathe.com/ma-genealogie/?share=facebook
+18:58:45	Warning: 	File has moved from https://leonmathe.com/ma-genealogie/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fma-genealogie%2F&t=Ma%20g%C3%A9n%C3%A9alogie
+18:58:49	Warning: 	Found for https://leonmathe.com/le-golf-dembats/?share=twitter
+18:58:49	Warning: 	File has moved from https://leonmathe.com/le-golf-dembats/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Le%20Golf%20d%27Embats&url=https%3A%2F%2Fleonmathe.com%2Fle-golf-dembats%2F
+18:58:49	Warning: 	Found for https://leonmathe.com/le-golf-dembats/?share=facebook
+18:58:49	Warning: 	File has moved from https://leonmathe.com/le-golf-dembats/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fle-golf-dembats%2F&t=Le%20Golf%20d%27Embats
+18:58:54	Warning: 	Found for https://leonmathe.com/patchwork/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/patchwork/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Patchwork&url=https%3A%2F%2Fleonmathe.com%2Fpatchwork%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/patchwork/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/patchwork/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fpatchwork%2F&t=Patchwork
+18:58:54	Warning: 	Found for https://leonmathe.com/__trashed-3/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/__trashed-3/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20animaux&url=https%3A%2F%2Fleonmathe.com%2F__trashed-3%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/__trashed-3/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/__trashed-3/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F__trashed-3%2F&t=Nos%20animaux
+18:58:54	Warning: 	Found for https://leonmathe.com/nos-jobs/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/nos-jobs/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Nos%20jobs&url=https%3A%2F%2Fleonmathe.com%2Fnos-jobs%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/nos-jobs/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/nos-jobs/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnos-jobs%2F&t=Nos%20jobs
+18:58:54	Warning: 	Found for https://leonmathe.com/mon-parcours/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/mon-parcours/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Mes%20jobs&url=https%3A%2F%2Fleonmathe.com%2Fmon-parcours%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/mon-parcours/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/mon-parcours/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fmon-parcours%2F&t=Mes%20jobs
+18:58:54	Warning: 	Found for https://leonmathe.com/charbonnage/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/charbonnage/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Charbonnage&url=https%3A%2F%2Fleonmathe.com%2Fcharbonnage%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/charbonnage/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/charbonnage/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fcharbonnage%2F&t=Charbonnage
+18:58:54	Warning: 	Found for https://leonmathe.com/bertrand-faure-plastique-belgique/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/bertrand-faure-plastique-belgique/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Bertrand%20Faure%20Plastique%20Belgique&url=https%3A%2F%2Fleonmathe.com%2Fbertrand-faure-plastique-belgique%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/bertrand-faure-plastique-belgique/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/bertrand-faure-plastique-belgique/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fbertrand-faure-plastique-belgique%2F&t=Bertrand%20Faure%20Plastique%20Belgique
+18:58:54	Warning: 	Found for https://leonmathe.com/sibf/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/sibf/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=SIBF&url=https%3A%2F%2Fleonmathe.com%2Fsibf%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/sibf/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/sibf/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fsibf%2F&t=SIBF
+18:58:54	Warning: 	Found for https://leonmathe.com/faurecia/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/faurecia/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Faurecia&url=https%3A%2F%2Fleonmathe.com%2Ffaurecia%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/faurecia/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/faurecia/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Ffaurecia%2F&t=Faurecia
+18:58:54	Warning: 	Found for https://leonmathe.com/la-pharmacie-de-mathe/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/la-pharmacie-de-mathe/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=La%20pharmacie%20de%20Mathe&url=https%3A%2F%2Fleonmathe.com%2Fla-pharmacie-de-mathe%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/la-pharmacie-de-mathe/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/la-pharmacie-de-mathe/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fla-pharmacie-de-mathe%2F&t=La%20pharmacie%20de%20Mathe
+18:58:54	Warning: 	Found for https://leonmathe.com/poteries-de-bouffioulx/?share=twitter
+18:58:54	Warning: 	File has moved from https://leonmathe.com/poteries-de-bouffioulx/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=POTERIES%20de%20BOUFFIOULX&url=https%3A%2F%2Fleonmathe.com%2Fpoteries-de-bouffioulx%2F
+18:58:54	Warning: 	Found for https://leonmathe.com/poteries-de-bouffioulx/?share=facebook
+18:58:54	Warning: 	File has moved from https://leonmathe.com/poteries-de-bouffioulx/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fpoteries-de-bouffioulx%2F&t=POTERIES%20de%20BOUFFIOULX
+18:58:56	Warning: 	Found for https://leonmathe.com/notre-poterie/?share=twitter
+18:58:56	Warning: 	File has moved from https://leonmathe.com/notre-poterie/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=La%20poterie%20Crame%20Camberlin&url=https%3A%2F%2Fleonmathe.com%2Fnotre-poterie%2F
+18:58:56	Warning: 	Found for https://leonmathe.com/notre-poterie/?share=facebook
+18:58:56	Warning: 	File has moved from https://leonmathe.com/notre-poterie/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fnotre-poterie%2F&t=La%20poterie%20Crame%20Camberlin
+18:58:56	Warning: 	Found for https://leonmathe.com/les-crame-potiers/?share=twitter
+18:58:56	Warning: 	File has moved from https://leonmathe.com/les-crame-potiers/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Les%20%20Potiers%20Crame&url=https%3A%2F%2Fleonmathe.com%2Fles-crame-potiers%2F
+18:58:56	Warning: 	Found for https://leonmathe.com/les-crame-potiers/?share=facebook
+18:58:56	Warning: 	File has moved from https://leonmathe.com/les-crame-potiers/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fles-crame-potiers%2F&t=Les%20%20Potiers%20Crame
+18:58:56	Error: 	"Not Found" (404) at link https://leonmathe.com/2017/08/19/ldelesennegmailcom/ (from https://leonmathe.com/blog/)
+18:58:56	Warning: 	Found for https://leonmathe.com/blog/?share=twitter
+18:58:56	Warning: 	File has moved from https://leonmathe.com/blog/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=BLOG&url=https%3A%2F%2Fleonmathe.com%2Fblog%2F
+18:58:56	Warning: 	Found for https://leonmathe.com/blog/?share=facebook
+18:58:56	Warning: 	File has moved from https://leonmathe.com/blog/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fblog%2F&t=BLOG
+18:58:56	Warning: 	Found for https://leonmathe.com/2022/12/29/retour-aux-sources-belgique-septembre-2022/?share=twitter
+18:58:56	Warning: 	File has moved from https://leonmathe.com/2022/12/29/retour-aux-sources-belgique-septembre-2022/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Retour%20aux%20sources%20%20%3A%20Belgique%20septembre%202022&url=https%3A%2F%2Fleonmathe.com%2F2022%2F12%2F29%2Fretour-aux-sources-belgique-septembre-2022%2F
+18:58:56	Warning: 	Found for https://leonmathe.com/2022/12/29/retour-aux-sources-belgique-septembre-2022/?share=facebook
+18:58:56	Warning: 	File has moved from https://leonmathe.com/2022/12/29/retour-aux-sources-belgique-septembre-2022/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2022%2F12%2F29%2Fretour-aux-sources-belgique-septembre-2022%2F&t=Retour%20aux%20sources%20%20%3A%20Belgique%20septembre%202022
+18:58:56	Warning: 	Found for https://leonmathe.com/2017/08/20/ldelesennegmailcomla-maladie-de-mathe/?share=twitter
+18:58:56	Warning: 	File has moved from https://leonmathe.com/2017/08/20/ldelesennegmailcomla-maladie-de-mathe/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=La%20maladie%20de%20Math%C3%A9%20%3A%20AMS&url=https%3A%2F%2Fleonmathe.com%2F2017%2F08%2F20%2Fldelesennegmailcomla-maladie-de-mathe%2F
+18:58:56	Warning: 	Found for https://leonmathe.com/2017/08/20/ldelesennegmailcomla-maladie-de-mathe/?share=facebook
+18:58:56	Warning: 	File has moved from https://leonmathe.com/2017/08/20/ldelesennegmailcomla-maladie-de-mathe/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2017%2F08%2F20%2Fldelesennegmailcomla-maladie-de-mathe%2F&t=La%20maladie%20de%20Math%C3%A9%20%3A%20AMS
+18:58:56	Warning: 	Found for https://leonmathe.com/2017/11/03/ldelesennegmailcom-3/?share=twitter
+18:58:56	Warning: 	File has moved from https://leonmathe.com/2017/11/03/ldelesennegmailcom-3/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Mon%20MacIntosh&url=https%3A%2F%2Fleonmathe.com%2F2017%2F11%2F03%2Fldelesennegmailcom-3%2F
+18:58:56	Warning: 	Found for https://leonmathe.com/2017/11/03/ldelesennegmailcom-3/?share=facebook
+18:58:56	Warning: 	File has moved from https://leonmathe.com/2017/11/03/ldelesennegmailcom-3/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2017%2F11%2F03%2Fldelesennegmailcom-3%2F&t=Mon%20MacIntosh
+18:58:57	Warning: 	Found for https://leonmathe.com/2018/02/03/clea/?share=twitter
+18:58:57	Warning: 	File has moved from https://leonmathe.com/2018/02/03/clea/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Cl%C3%A9a&url=https%3A%2F%2Fleonmathe.com%2F2018%2F02%2F03%2Fclea%2F
+18:58:57	Warning: 	Found for https://leonmathe.com/2018/02/03/clea/?share=facebook
+18:58:57	Warning: 	File has moved from https://leonmathe.com/2018/02/03/clea/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2018%2F02%2F03%2Fclea%2F&t=Cl%C3%A9a
+18:59:04	Warning: 	Found for https://leonmathe.com/2017/10/28/ldelesennegmailcom-2/?share=twitter
+18:59:04	Warning: 	File has moved from https://leonmathe.com/2017/10/28/ldelesennegmailcom-2/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Mon%20jardin.&url=https%3A%2F%2Fleonmathe.com%2F2017%2F10%2F28%2Fldelesennegmailcom-2%2F
+18:59:04	Warning: 	Found for https://leonmathe.com/2017/10/28/ldelesennegmailcom-2/?share=facebook
+18:59:04	Warning: 	File has moved from https://leonmathe.com/2017/10/28/ldelesennegmailcom-2/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2017%2F10%2F28%2Fldelesennegmailcom-2%2F&t=Mon%20jardin.
+18:59:04	Warning: 	Found for https://leonmathe.com/2020/07/30/blog/?share=twitter
+18:59:04	Warning: 	File has moved from https://leonmathe.com/2020/07/30/blog/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Cloture%20du%20jardin.&url=https%3A%2F%2Fleonmathe.com%2F2020%2F07%2F30%2Fblog%2F
+18:59:04	Warning: 	Found for https://leonmathe.com/2020/07/30/blog/?share=facebook
+18:59:04	Warning: 	File has moved from https://leonmathe.com/2020/07/30/blog/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2020%2F07%2F30%2Fblog%2F&t=Cloture%20du%20jardin.
+18:59:18	Warning: 	Found for https://leonmathe.com/le-roman-de-francoise/?share=twitter
+18:59:18	Warning: 	File has moved from https://leonmathe.com/le-roman-de-francoise/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Le%20Roman%20de%20Fran%C3%A7oise&url=https%3A%2F%2Fleonmathe.com%2Fle-roman-de-francoise%2F
+18:59:18	Warning: 	Found for https://leonmathe.com/le-roman-de-francoise/?share=facebook
+18:59:18	Warning: 	File has moved from https://leonmathe.com/le-roman-de-francoise/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2Fle-roman-de-francoise%2F&t=Le%20Roman%20de%20Fran%C3%A7oise
+18:59:30	Warning: 	Found for https://leonmathe.com/2018/02/02/ldelesennegmailcom-4/?share=twitter
+18:59:30	Warning: 	File has moved from https://leonmathe.com/2018/02/02/ldelesennegmailcom-4/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=blog%20sur%20l%27%20AMS&url=https%3A%2F%2Fleonmathe.com%2F2018%2F02%2F02%2Fldelesennegmailcom-4%2F
+18:59:30	Warning: 	Found for https://leonmathe.com/2018/02/02/ldelesennegmailcom-4/?share=facebook
+18:59:30	Warning: 	File has moved from https://leonmathe.com/2018/02/02/ldelesennegmailcom-4/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2018%2F02%2F02%2Fldelesennegmailcom-4%2F&t=blog%20sur%20l%27%20AMS
+18:59:40	Warning: 	Found for https://leonmathe.com/2018/02/14/voiture-dhandicape/?share=twitter
+18:59:40	Warning: 	File has moved from https://leonmathe.com/2018/02/14/voiture-dhandicape/?share=twitter to https://twitter.com/intent/tweet?related=wordpressdotcom&text=Voiture%20d%27handicap%C3%A9.&url=https%3A%2F%2Fleonmathe.com%2F2018%2F02%2F14%2Fvoiture-dhandicape%2F
+18:59:40	Warning: 	Found for https://leonmathe.com/2018/02/14/voiture-dhandicape/?share=facebook
+18:59:40	Warning: 	File has moved from https://leonmathe.com/2018/02/14/voiture-dhandicape/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fleonmathe.com%2F2018%2F02%2F14%2Fvoiture-dhandicape%2F&t=Voiture%20d%27handicap%C3%A9.
+
+HTTrack Website Copier/3.49-2 mirror complete in 8 minutes 32 seconds : 1812 links scanned, 1681 files written (175956818 bytes overall) [141637414 bytes received at 276635 bytes/sec], 45490477 bytes transferred using HTTP compression in 739 files, ratio 22%, 7.6 requests per connection
+(4 errors, 248 warnings, 0 messages)
