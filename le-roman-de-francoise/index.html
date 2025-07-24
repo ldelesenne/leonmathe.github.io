@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="fr-FR" class="no-js">
+
+<!-- Mirrored from leonmathe.com/le-roman-de-francoise/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Jun 2023 16:57:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="../xmlrpc.php">
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Le Roman de Françoise &#8211; Notre Histoire</title>
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com/" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '../remote-login4f98.html?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=2896'
+					+ '&is_singular=';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&amp;origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9sZW9ubWF0aGUuY29t"
+		+ "&wpcomid=133488904"
+		+ "&time=1687712148";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='http://s2.wp.com/' />
+<link rel='dns-prefetch' href='http://s1.wp.com/' />
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel='dns-prefetch' href='http://wordpress.com/' />
+<link rel='dns-prefetch' href='http://fonts-api.wp.com/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Notre Histoire &raquo; Flux" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Notre Histoire &raquo; Flux des commentaires" href="../comments/feed/index.html" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s2.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1677072837i&ver=6.2.1-RC1-55769"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJyFUu1uwjAMfKGlpggV/kx7lClNrMyQL8VJWd9+odCqiAF/opx957OdwDkKFXxGn8EVEW0x5BksnZDhiDlKdRITahTzB6zoM9eUCntMpmYSwtB2zabZQF/IauhtmAr0SaYROI8WHwqtfGfHKwYufg59D+h1SCBLDk7mTGohD6QxxITMd6aoKVfBBBgmUj3xvPiTV7boy5wMrrIlWnRTQysQrRwxCYtGqrFx5N/La26N70TPl3frc9m5HEPJwiTST9b2tkSSmbzhN3IVbrJt0x6aVjC5aFEkHJodaOK8MMR9oWX+GgBlJTMpkX/qzPzvyKtnvnyUGndRPm7rhexM2mC+Gl7vIuPva0msNqLvp+8h6umouLnLqvtyn2136PaHfdduj387SiYB&amp;cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.wp-block-cover__image-background.has-parallax {
+	background-size: cover;
+}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans';--wp--preset--font-family--alegreya: Alegreya;--wp--preset--font-family--arvo: Arvo;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda';--wp--preset--font-family--cabin: Cabin;--wp--preset--font-family--chivo: Chivo;--wp--preset--font-family--commissioner: Commissioner;--wp--preset--font-family--cormorant: Cormorant;--wp--preset--font-family--courier-prime: 'Courier Prime';--wp--preset--font-family--crimson-pro: 'Crimson Pro';--wp--preset--font-family--dm-mono: 'DM Mono';--wp--preset--font-family--dm-sans: 'DM Sans';--wp--preset--font-family--domine: Domine;--wp--preset--font-family--eb-garamond: 'EB Garamond';--wp--preset--font-family--epilogue: Epilogue;--wp--preset--font-family--figtree: Figtree;--wp--preset--font-family--fira-sans: 'Fira Sans';--wp--preset--font-family--fraunces: Fraunces;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono';--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans';--wp--preset--font-family--inter: Inter;--wp--preset--font-family--josefin-sans: 'Josefin Sans';--wp--preset--font-family--jost: Jost;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville';--wp--preset--font-family--libre-franklin: 'Libre Franklin';--wp--preset--font-family--literata: Literata;--wp--preset--font-family--lora: Lora;--wp--preset--font-family--merriweather: Merriweather;--wp--preset--font-family--montserrat: Montserrat;--wp--preset--font-family--newsreader: Newsreader;--wp--preset--font-family--nunito: Nunito;--wp--preset--font-family--open-sans: 'Open Sans';--wp--preset--font-family--overpass: Overpass;--wp--preset--font-family--petrona: Petrona;--wp--preset--font-family--piazzolla: Piazzolla;--wp--preset--font-family--playfair-display: 'Playfair Display';--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans';--wp--preset--font-family--poppins: Poppins;--wp--preset--font-family--raleway: Raleway;--wp--preset--font-family--roboto-slab: 'Roboto Slab';--wp--preset--font-family--roboto: Roboto;--wp--preset--font-family--rubik: Rubik;--wp--preset--font-family--sora: Sora;--wp--preset--font-family--source-sans-pro: 'Source Sans Pro';--wp--preset--font-family--source-serif-pro: 'Source Serif Pro';--wp--preset--font-family--space-mono: 'Space Mono';--wp--preset--font-family--texturina: Texturina;--wp--preset--font-family--work-sans: 'Work Sans';--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='../../s1.wp.com/_static/indexba1f.html??/wp-content/mu-plugins/comment-likes/css/comment-likes.css,/i/noticons/noticons.css?m=1436783281j&amp;cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='afterlight-fonts-css' href='https://fonts-api.wp.com/css?family=Playfair+Display%3A400%2C700%2C400italic%2C700italic%7CLato%3A400%2C700%2C400italic%2C700italic%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s2.wp.com/_static/??-eJyNjt0KwjAMhV/IGqb4dyE+inQl6zrbtDQpw7e3Ey8qinh3PjjfSWBOykQSJIFQVPLFOmKYUJI2txcDF4KrIwMWCbOrAn+Pa8O8gmZTRgzIkEoPehDM3tlRgOXu8c/ucvbZV3MyMXxYzdcWo/LRaHGR3kANXrv8S83Y+2hrtFBbDS7SJZy7/XHXdZvt6TA9AIVbczs=&amp;cssminify=yes' type='text/css' media='all' />
+<style id='afterlight-style-inline-css'>
+body:before { background-image: url("../../essaisleonmathe.files.wordpress.com/2017/08/site1-fileminimizer.html"); }
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='print-css-5-1' href='../../s1.wp.com/wp-content/mu-plugins/global-print/global-printbcec.css?m=1465851035i&amp;cssminify=yes' type='text/css' media='print' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='https://s1.wp.com/_static/??-eJyNjcsKAjEMRX/IGmR0HBfip0hMS9sxTYppGfx7H7gRN+7ugcs5sFRHKi1Ig9Jd5R6zGMyhVaTrh8G6QFHfORhYwlvw6P39PbPENZmt4G/ROQuBKWVkxxrVvuBH1lIoz2zaQmS9IL8Op3LcjNN+N4yHaZgfuUVIcA==&amp;cssminify=yes' type='text/css' media='all' />
+<script id='wpcom-actionbar-placeholder-js-extra'>
+var actionbardata = {"siteID":"133488904","siteURL":"https:\/\/leonmathe.com","xhrURL":"https:\/\/leonmathe.com\/wp-admin\/admin-ajax.php","nonce":"6c7de52792","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","shortlink":"https:\/\/wp.me\/P926yQ-KI","i18n":{"followedText":"Les nouveaux articles de ce site appara\u00eetront d\u00e9sormais dans votre <a href=\"https:\/\/wordpress.com\/\">Lecteur<\/a>","foldBar":"R\u00e9duire cette barre","unfoldBar":"\u00c9tendre cette barre"}};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??-eJzTLy/QTc7PK0nNK9HPKtbPzU/KzEnVLS1OLUpMB4rpZual5etlFevoo6oryinRLSjKr6iEyWXmJeeUpqQWgySzCktTiyqhlF5uZh5BRbq5melFiSWpUMX2ubaGZuYWlhYGlhaGWQCPrjue'></script>
+<script type='text/javascript'>
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://leonetmathe.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://wp.me/P926yQ-KI' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fleonmathe.com%2Fle-roman-de-francoise%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fleonmathe.com%2Fle-roman-de-francoise%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Le Roman de Françoise" />
+<meta property="og:url" content="https://leonmathe.com/le-roman-de-francoise/" />
+<meta property="og:description" content="Mathé&nbsp;!&nbsp; C’était la première fois que j’entendais ton nom&nbsp;: 6 ième latine , cours de récréation .Thérèse Labrique t’appelait…Tu ne me connaissais pas et ce drôle de prénom m’intrigua…" />
+<meta property="article:published_time" content="2023-01-09T20:42:16+00:00" />
+<meta property="article:modified_time" content="2023-01-15T10:25:46+00:00" />
+<meta property="og:site_name" content="Notre Histoire" />
+<meta property="og:image" content="https://leonetmathe.files.wordpress.com/2017/08/cropped-1961.jpg?w=200" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<meta name="twitter:text:title" content="Le Roman de&nbsp;Françoise" />
+<meta name="twitter:image" content="https://leonetmathe.files.wordpress.com/2017/08/cropped-1961.jpg?w=240" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="../osd.xml" title="Notre Histoire" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Notre Histoire" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="C&#039;est l&#039;histoire de notre amour et de toute la famille et amis" /><meta name="msapplication-task" content="name=Souscrire;action-uri=https://leonmathe.com/feed/;icon-uri=https://leonetmathe.files.wordpress.com/2017/08/cropped-1961.jpg?w=16" /><meta name="msapplication-task" content="name=Inscrivez-vous pour créer un blog gratuitement;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Assistance WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Forums WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="Mathé&nbsp;!&nbsp; C’était la première fois que j’entendais ton nom&nbsp;: 6 ième latine , cours de récréation .Thérèse Labrique t’appelait…Tu ne me connaissais pas et ce drôle de prénom m’intriguait déjà&nbsp;!Les souvenirs d’humanité sont lointains, il ne me reste que quelques impressions….Toujours au dernier banc, l’ENIGME. Voilà ce que tu étais, à ce moment, pour moi.Impénétrable,&hellip;" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("../../essaisleonmathe.files.wordpress.com/2017/08/site1-fileminimizer.html"); background-position: left top; background-size: auto; background-repeat: no-repeat; background-attachment: fixed; }
+</style>
+	<link rel="icon" href="../../leonetmathe.files.wordpress.com/2017/08/cropped-196176ca.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="../../leonetmathe.files.wordpress.com/2017/08/cropped-19619939.jpg?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../leonetmathe.files.wordpress.com/2017/08/cropped-1961ad83.jpg?w=180" />
+<meta name="msapplication-TileImage" content="https://leonetmathe.files.wordpress.com/2017/08/cropped-1961.jpg?w=270" />
+<!-- Your Google Analytics Plugin is missing the tracking ID -->
+</head>
+
+<body class="page-template-default page page-id-2896 custom-background wp-custom-logo customizer-styles-applied single primary-menu full-page-background has-overlay widgets-hidden has-site-logo highlander-enabled highlander-dark">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Aller au contenu principal</a>
+
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-top">
+							<nav class="main-navigation" role="navigation">
+					<div class="menu-primary-container"><ul id="menu-primary" class="nav-menu"><li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../accueil/index.html">Année 1956</a></li>
+<li id="menu-item-2542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2542"><a href="../mathe/index.html">Mathé</a></li>
+<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-49"><a href="../notre-jeunesse/index.html">Nos débuts</a>
+<ul class="sub-menu">
+	<li id="menu-item-241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-241"><a href="../le-tram-8/index.html">Le tram 8</a></li>
+	<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="../mamy/index.html">Mamy</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="../moise-sauvee-des-eaux/index.html">Moïse sauvée des eaux</a></li>
+	<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="../ldelesennegmailcom/index.html">Escapade à Paris</a></li>
+	<li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200"><a href="../la-ferme-de-courriere/index.html">La ferme de Courrière</a></li>
+	<li id="menu-item-1299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1299"><a href="../nos-soirees/index.html">Nos soirées</a></li>
+</ul>
+</li>
+<li id="menu-item-2816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2816"><a href="../notre-mariage/index.html">Notre mariage</a></li>
+<li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-206"><a href="../nos-enfants/index.html">Nos enfants</a>
+<ul class="sub-menu">
+	<li id="menu-item-2075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2075"><a href="../roland/index.html">Roland</a></li>
+	<li id="menu-item-2103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2103"><a href="../ldelesennegmailcom-2/index.html">Catherine</a></li>
+</ul>
+</li>
+<li id="menu-item-1466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1466"><a href="../la-famille/index.html">La famille</a>
+<ul class="sub-menu">
+	<li id="menu-item-1467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1467"><a href="../ma-belle-soeur/index.html">Ma belle sœur</a></li>
+	<li id="menu-item-1594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1594"><a href="../mes-neveux-et-nieces/index.html">Mes neveux et nièces.</a></li>
+	<li id="menu-item-2962" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2962"><a href="../2023/01/04/les-romainville/index.html">Les Romainville</a></li>
+	<li id="menu-item-2245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2245"><a href="../les-wauthy/index.html">Les Wauthy</a></li>
+	<li id="menu-item-2277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2277"><a href="../les-delesenne/index.html">Les Delesenne</a></li>
+	<li id="menu-item-2415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415"><a href="../les-everaert/index.html">Les Everaert</a></li>
+	<li id="menu-item-2434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2434"><a href="../les-desmanet/index.html">Les Desmanet</a></li>
+</ul>
+</li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-235"><a href="../nos-amis/index.html">Nos amis</a>
+<ul class="sub-menu">
+	<li id="menu-item-1974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1974"><a href="../francoise/index.html">Françoise</a></li>
+	<li id="menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213"><a href="../nos-amis-charles-et-francoise/index.html">Charles</a></li>
+	<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="../claire-et-rene/index.html">Claire et René</a></li>
+	<li id="menu-item-219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../michel-et-michele/index.html">Michel et Michèle</a></li>
+	<li id="menu-item-2383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2383"><a href="../jp-vuylsteke/index.html">JP.Vuylsteke</a></li>
+	<li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="../nos-visiteurs/index.html">WK souvenirs</a></li>
+</ul>
+</li>
+<li id="menu-item-1230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1230"><a href="../le-gers-2/index.html">Le GERS</a>
+<ul class="sub-menu">
+	<li id="menu-item-1514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1514"><a href="../les-branet/index.html">Les Branet</a></li>
+	<li id="menu-item-1712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1712"><a href="../nos-voisins/index.html">Les Bergouts</a></li>
+	<li id="menu-item-2989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2989"><a href="../les-laberou/index.html">Les Laberou</a></li>
+	<li id="menu-item-1593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1593"><a href="../notre-gersification/index.html">Notre Gersification</a></li>
+	<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="../ball-trap-du-quinze-aout/index.html">Ball Trap du quinze août</a></li>
+	<li id="menu-item-2219" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2219"><a href="../2017/12/24/ldelesennegmailcom-mai-2000/index.html">1 Mai 2000</a></li>
+</ul>
+</li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48"><a href="../nos-maisons/index.html">Nos maisons</a>
+<ul class="sub-menu">
+	<li id="menu-item-214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214"><a href="../de-farcienne-a-miramont-d-astarac/index.html">de Farcienne à Miramont d’ Astarac</a></li>
+</ul>
+</li>
+<li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-209"><a href="../nos-hobby/index.html">Nos hobby</a>
+<ul class="sub-menu">
+	<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="../ma-genealogie/index.html">Ma généalogie</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="../le-golf-dembats/index.html">Le Golf d’Embats</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="../patchwork/index.html">Patchwork</a></li>
+	<li id="menu-item-2555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2555"><a href="../__trashed-3/index.html">Nos animaux</a></li>
+</ul>
+</li>
+<li id="menu-item-239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-239"><a href="../nos-jobs/index.html">Nos jobs</a>
+<ul class="sub-menu">
+	<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-218"><a href="../mon-parcours/index.html">Mes jobs</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2025"><a href="../charbonnage/index.html">Charbonnage</a></li>
+		<li id="menu-item-2037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2037"><a href="../bertrand-faure-plastique-belgique/index.html">Bertrand Faure Plastique Belgique</a></li>
+		<li id="menu-item-2036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2036"><a href="../sibf/index.html">SIBF</a></li>
+		<li id="menu-item-2052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2052"><a href="../faurecia/index.html">Faurecia</a></li>
+	</ul>
+</li>
+	<li id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a href="../la-pharmacie-de-mathe/index.html">La pharmacie de Mathe</a></li>
+</ul>
+</li>
+<li id="menu-item-2952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2952"><a href="../poteries-de-bouffioulx/index.html">POTERIES de BOUFFIOULX</a>
+<ul class="sub-menu">
+	<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="../notre-poterie/index.html">La poterie Crame Camberlin</a></li>
+	<li id="menu-item-2953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2953"><a href="../les-crame-potiers/index.html">Les  Potiers Crame</a></li>
+</ul>
+</li>
+<li id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-227"><a href="../contact/index.html">Contact</a></li>
+<li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="../a-propos/index.html">À propos</a></li>
+<li id="menu-item-1935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1935"><a href="../blog/index.html">BLOG</a>
+<ul class="sub-menu">
+	<li id="menu-item-2771" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2771"><a href="../2022/12/29/retour-aux-sources-belgique-septembre-2022/index.html">Retour aux sources  : Belgique septembre 2022</a></li>
+	<li id="menu-item-2220" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2220"><a href="../2017/08/20/ldelesennegmailcomla-maladie-de-mathe/index.html">La maladie de Mathé : AMS</a></li>
+	<li id="menu-item-2222" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2222"><a href="../indexb82b.html?p=934">Les mémoires de Louise Romainville</a></li>
+	<li id="menu-item-2217" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2217"><a href="../2017/11/03/ldelesennegmailcom-3/index.html">Mon MacIntosh</a></li>
+	<li id="menu-item-2957" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2957"><a href="../2018/02/03/clea/index.html">Cléa</a></li>
+	<li id="menu-item-2218" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-2218"><a href="../2017/10/28/ldelesennegmailcom-2/index.html">Mon jardin.</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2486"><a href="../2020/07/30/blog/index.html">Cloture du jardin.</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></div>				</nav><!-- .main-navigation -->
+			
+							<button id="sidebar-toggle" class="sidebar-toggle"></button>
+					</div><!-- .site-header-top -->
+
+		<div class="site-branding">
+			<div class="site-branding-inner">
+				<a href="../index.html" class="site-logo-link" rel="home" itemprop="url"><img width="129" height="192" src="../../leonetmathe.files.wordpress.com/2017/08/papa200715ec5.jpg?w=129" class="site-logo attachment-afterlight-logo" alt="" decoding="async" loading="lazy" data-size="afterlight-logo" itemprop="logo" srcset="https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg?w=129 129w, https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg?w=258 258w, https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg?w=101 101w, https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg?w=201 201w" sizes="(max-width: 129px) 100vw, 129px" data-attachment-id="1300" data-permalink="https://leonmathe.com/papa2007/" data-orig-file="https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg" data-orig-size="322,480" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="papa2007" data-image-description="" data-image-caption="" data-medium-file="https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg?w=201" data-large-file="https://leonetmathe.files.wordpress.com/2017/08/papa20071.jpg?w=322" /></a>
+									<p class="site-title"><a href="../index.html" rel="home">Notre Histoire</a></p>
+									<p class="site-description">C&#039;est l&#039;histoire de notre amour et de toute la famille et amis</p>
+							</div>
+
+					</div><!-- .site-branding -->
+	</header><!-- .site-header -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-2896" class="post-2896 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Le Roman de&nbsp;Françoise</h1>	</header>
+
+	
+	<div class="entry-content">
+		
+<p>Mathé&nbsp;!&nbsp; C’était la première fois que j’entendais ton nom&nbsp;: 6 ième latine , cours de récréation .<br>Thérèse Labrique t’appelait…Tu ne me connaissais pas et ce drôle de prénom m’intriguait déjà&nbsp;!<br>Les souvenirs d’humanité sont lointains, il ne me reste que quelques impressions….<br>Toujours au dernier banc, l’ENIGME. Voilà ce que tu étais, à ce moment, pour moi.<br>Impénétrable, inabordable, irrespectueuse. Tu t’entourais de mystères, jamais tu ne te&nbsp; laissais aller à nous ouvrir tes pensées. Tu emmerdais les profs, tu toisais les élèves…tu dédaignais les points…et surtout celles pour qui cela comptait..&nbsp; (Tu avais raison, je l’avoue). Cela te pesait de venir dans notre classe qui ne fut jamais la tienne.<br>Ta vraie vie commençait à quatre moins le quart. Déjà le sens de la fatalité était ancré en toi.<br>Les examens iront comme ils voudront. Ca ne sert à rien de s’en faire&nbsp;!!<br>Tu te rappelles ou Fafa se mit en colère tout rouge parce que Mademoiselle Romainville ne daignait pas venir à coté de miss Geneviève Roland.&nbsp; Quel&nbsp; bourreau, impossible de n’y pas&nbsp; déceler ta fureur de devoir te plier après 3 jours d’obstination.<br>&nbsp;Eh&nbsp;! Oui Mathé a ses petits nerfs, toujours hypersensibles et irritables néfastement … lors de la présence d’une intruse, qui était de celles-là, ce qu’il y en avait de cette catégorie «&nbsp;indésirables&nbsp;» en humanité.<br>Gene et ses lumières t’indisposent.&nbsp; Son tempérament explosif et trop spontané chiffonne ta réserve, et Marianne qui remonte ses poids du plus profonds de ses orteils&nbsp;!<br>Andrée Hancisse , frotte manche et maniérée , Françoise Anciaux n’en parlons pas, tu as même oublié son nom, mais non qu’elle revissait chaque fois son stylo après caque mot, Michele Bauvois sans couleur, F.Bultiaux gnan-gnan,&nbsp; Louise Marie trop paysanne pour la duchesse. Seul Isabelle sut t’intéresser, je t’en félicite. Josette Storme «&nbsp;ta copine&nbsp;» l’incompréhension me dépasse, comment s’y était-elle prise&nbsp;? La classe n’était pour toi qu’un troupeau idiot de perruches caquetantes et énervantes.<br></p>
+
+
+
+<p>Mais si nous parlions du tram et de ce grand garçon, un peu snob, blond, cheveux en brosse, yeux bleu. Ce gamin que tu adorerais chicaner et se foutant de ces pantalons par exemple. Pauvre petit Léon. Puis chicaneries passées ce fut l’époque de la métamorphose. Au fond c’est agréable de discuter avec lui, hein Mathé.<br>&nbsp;Tu te rappelles le tram file et Léon sur son vélo à fond de balle qui descend la rue du Pont-Neuf,&nbsp; à chaque arrêt il se rapproche pour disparaître à chaque démarrage. On revient ensemble du terminus, on parle on apprend tant de choses en discutant&nbsp;!<br>Puis le vélo devient de trop, il est relégué, Léon comme par hasard prends-les même trams, rate dîner et études&nbsp;!! Quelle importance&nbsp;!!Puis vinrent&nbsp; les complications, Bobby, papa et les ragots de Châtelet. Dorénavant ce sera le tournoi de galanterie entre Charles et Léon. Tu te rappelles, la foire, les autres,<br>les livres tombent , tous les deux se battent pour avoir l’honneur de remettre les outils de science à la belle&nbsp;. Charles gagne, mince victoire, tandis que la miss jouissait de son succès…<br>Mais papa s’emmêle. Léon n&rsquo;est plus le héros qui sauve de la noyade sa fille chérie..Ah non&nbsp;!! «&nbsp;Il dépasse les bornes, maintenant je le mets à la porte&nbsp;».<br>Ce qu’il a oublié c’est qu’il y’a 2 portes, la porte du garage sauve la situation dramatique et à défaut ce sera la porte de la cave .Il devra se rendre compte, &nbsp;ce cher papa, que&nbsp; Léon est «&nbsp; le type qu’on met à la porte mais qui rentre par la fenêtre&nbsp;»<br>29 avril 1956 – Promesses- Personne n’y croira et pourtant..ces deux là, ils sont uniques. Il suffisait d’y croire, il suffisait d’aimer, ce qu’ils ont fait et ce qu’ils continuent à faire.</p>
+
+
+
+<p>Poésie&nbsp;: fancy-fair de Notre Dame.&nbsp; Je le vois pour la 1<sup>ère</sup> fois, il a un blaiser bleu roi, il est beau, il se sent à l’aise. Voilà ma 1<sup>ère</sup> impression.<br>J’avais mon cabic vers maintenant il est noir. J’ai grandi, j’ai pleuré, j’ai vu et j’ai vaincu…. Tu avais ta robe chemisier bleu,&nbsp; celle qui est trop longue maintenant. La mode a raccourci, et tu n’as pas changé, non tes mollets portent toujours la marque Romainville &nbsp;mais pour moi tu es devenue Mathé et Léon est mon ami Tu t’es ouverte, tu es souriante et je t’aime.</p>
+
+
+
+<p>Ce jour là, je tai vue et lui aussi, je vous ai vu heureux ensemble, pour la première fois et j’ai compris très fort ce jour là, que la seul façon d’être heureux c’est d’aimer beaucoup et toujours, quelle que soit la personne.</p>
+
+
+
+<p>Une autre vision de vous deux&nbsp;: un soir à la sortie d’un film du Parc, 7 heures, tu avais mis ton impair saumon, lui son trench, vous marchiez bras de dessus, bras de dessous sur le boulevard Tirou, heureux. De loin je vous voyais….je crois avoir eu un pincement au cœur en pensant qu’un jour cette joie m’éclabousserait.</p>
+
+
+
+<p>Comment débuta notre amitié, je ne sais trop….le souvenir le plus reculé date du début de la troisième Latine et ce fut pour Léon que tu brisas ta glaciale réserve. Il avait besoin de mon élocution sur «&nbsp;Le silence de la mer&nbsp;». J’y avais mis dans ce travail tout mon âme, et pourtant, je te le cédai. Tu vins le chercher à la maison, ti vis maman, le corridor, la véranda et ce fut tout…, tu repars, je vais te conduire à l’arrêt du tram, cet arrêt qui nous verra si souvent…<br>Par la suite je me souviens être allée chez toi&nbsp;; Il s’agissait de bloquer de la physique ensemble. Tu m’a présenté à ta maman que j’aimé tout de suite… tant de&nbsp; douceur et d’amour se lisait dans son regard….. ta maison, grande, froide, et incohérente, &nbsp;me donnait l’impression qu’ on avait tout rassemblé dans un chapeau, meubles, bibelots, vaisselles, puis que les enfants s’étaient amusés à bien secouer ce chapeau , lancé tout en l’air, tout était retombé et depuis lors, chacun a mis son point d’honneur à ne rien bouger.<br></p>
+
+
+
+<p>Nous sommes allées étudier en haut, il faisait bon, du soleil, une machine à coudre, un vieux lit, bref une chambre inoccupée.<br>Ce fut court, un bruit de moto, Léon. Hé oui&nbsp;! il s’est payé un moyen de locomotion plus rapide afin de dépasser le tram. Depuis ce temps du deviens experte en bruit de&nbsp; moteur de moto…<br>4 à 4 , on descend, les livres oubliés, on fait connaissance. Au soir, je retourne sur la moto avec Léon. C’est dès ce moment que je l’ai trouvé sympathique.<br>Non, ce n’était pas la moto qui me plaisait en lui, mais sa simplicité.<br>Je me rappelle encore tes recommandations «&nbsp;Tu ne vas pas trop vite&nbsp;».<br>Quelle joie sur cette moto, un bruit de ferraille, l’illusion de fendre le vent et de s’évader loin des soucis&nbsp;; au débarquement Léon me dit «&nbsp; Tu diras bien à Mathé qu’on n’a pas été trop vite&nbsp;» J’ai promis.</p>
+
+
+
+<p>Déjà à cette époque vous viviez chacun en vertu de l’autre.<br>Et cette instant, au bas de l’escalier ou il te barrait la route pour monter…et gentiment tu as mis ta tête sur son épaule en disant «&nbsp; Pas encore, nous sommes trop jeunes&nbsp;», il a&nbsp; compris, il t’a admirée et fut heureux.</p>
+
+
+
+<p>Léon change grâce à toi, du garnement effronté, ironique, et sur de lui, il plie au début &nbsp;sans doute par diplomatie mais ensuite par conviction et respect.</p>
+
+
+
+<p>Et toi ma petite Mathé, tu prends la vie du bon coté et tu dépouilles de ta réserve comme d’un manteau démodé.<br></p>
+
+
+
+<p>Enfin ….je respire&nbsp;!<br><br></p>
+
+
+
+<p>Année 57 .Fin de la quatrième latine de Léon. Les Jésuites en ont marre de cet insupportable gosse,&nbsp; indiscipliné, irrespectueux, qui se bagarre à mort pour un mouchoir d’une certaine Mathé<br>&nbsp;Sont ce des manières&nbsp;? Non n’estcepas, manque de maturité…à luche .</p>
+
+
+
+<p>Il ne sera jamais Jésuite&nbsp;! Pauvre Léon et le tram, et le vélo, et Mathé qu’il attendait caché dans une grange lorsque papa venait la conduire à l’arrêt du tram et qu’il rattrapait à l’arrêt suivant&nbsp;!<br>Tout tombe à l’eau…il faudra quand même continuer sans tram et couse folle.</p>
+
+
+
+<p>Et oui , il a de la trempe ce garçon qui la première fois qu’il voit son future beau père répond à la question «&nbsp; En quelle année êtes-vous&nbsp;?&nbsp;»…&nbsp;«En cinquième latine » et devant la mine déconfite du papa «&nbsp;Mais je n’ai que 14 ans, Monsieur&nbsp;» ,&nbsp; d’un air de dire&nbsp;;&nbsp; je sais que j’en parais 18 , je les vaux peut être , mais ne vous en faites pas, je ne suis pas un cancre et je suis digne de l’amitié de votre fille. J’oubliais de dire que Léon à 14 ans était d’une prestance éblouissante.<br>Depuis ces 6 dernières années, il n’a pas changé et sa photo d’identité correspond toujours à son physique de maintenant.<br>Mathé, elle a bien changé. Ses cheveux sont passés par toutes le sauces, depuis le petit crêpage de mouton et les cheveux mi-longs très évaporés ou alors les tresses de petite fille de Marie qui chez elles prenaient un air de diable sautant de sa boite.<br></p>
+
+
+
+<p>Comment ont-ils pu résister à cette séparation. Ce n’est guère difficile, ils avaient cumulé tant d’heureux souvenirs&nbsp;!!<br>Tu te souviens Mathé et toi Léon, c’était la Meuse. Vous vous connaissiez depuis un an à peine Mathé, la finaude te donne son adresse avant de partir, tu enregistres sans rien dire&nbsp;; adieux plutôt triste, un mois sans se voir&#8230;C’est long.<br>Mais une après-midi, à peine quelques jours après son arrivée, Mathé voit arriver sur son éternel vélo…vous devinez… Léon. Bien sûr, il est là, mais pas pour&nbsp; une heure ou deux, il a tout prévu, il a emmené sa tente, son bardât, ses conserves….n’est il pas permis à tout le monde de camper, surtout dans un site aussi agréable que la Meuse loin des animations de la ville, pays enchanteur, l’eau , la nature, les rochers…l’idéal pour une âme faite comme celle de Léon qui ne cherche que la solitude et le calme&nbsp;!<br>Bref Léon est là, et pour vous prouver que c’est bien la tranquillité qu’il recherche, il veut camper sur l’île. Des îles en Belgique, c’est si rare…c’est donc l’unique&nbsp;: honni qui mal y pense….<br>Mathé donc prend la barque et conduit ce pauvre être épris de solitude dans son royaume, revient recevoir la semonce du paternel…Sans doute Léon n’en sortait pas pour monter sa tente car l’absence de Mathé fut longue.<br>Le soir , papa est de bonne humeur, se promène avec ses enfants, Léon est aussi de la partie qui se met en frais pour dérider papa, si bien que celui-ci l’invite à loger… Je n’oserais pas dire que tel était son but (celui de Léon) mais en tout cas pour culoté, il l’est…Et c’est ainsi que Léo passa sa première nuit chez Mathé… nuit bien mouvementée. Dès que les parents dorment, après avoir été écouté à la porte si leur souffle est bien régulier et s’ils se trouvent bien dans les bras de Morphée, grande numba dans la chambre des filles.<br></p>
+
+
+
+<p>Nick, Mathé, Jo et Léo regardent des photos, blaguent, et s’amusent comme des petits fous, tant et si bien, qu’un bruit insolite surgit de la chambres des parents&nbsp;: ni une&nbsp;, ni deux, retraites des garçons, plongeon dans le plumard des filles en n’oubliant pas d’accrocher au vol l’interrupteur pour éteindre la lumière. Fines comédiennes, ce n’est guère difficile de mimer un profond sommeil quand papa entre et s’inquiète de savoir si vous dormez bien. Dorénavant, la conversation se poursuivra par les tuyaux ou le morse du plafond, car Jo et Léon dormaient justement sous la chambre de Mathé.</p>
+
+
+
+<p>Prétendre qu’il n’y eut que joies et rires ne serait pas vrai. Non, ils édifient aussi leur amours en luttant tous les deux, même si cela leur coute.<br>Déjà au début ils font face..</p>
+
+
+
+<p>C’est un après 4 heures&nbsp;? Mathé doute de ses sentiments, ce n’est pas facile d’y voir clair. Au-delà de papa, Boby, au-delà de Léo même…Sa droiture l’obligea à mettre Léon au courant de ses doutes… non, c’est fini…ce qu’ils ont cru&nbsp; amour&nbsp; n’était que camaderies..Il est grand temps de retomber sur terre.<br>Léon écoute, il a mal, Mathé le sait, mais veut rester insensible à cette attitude puisque ce n’était pas moi..Léon a mal, ile ne dit rien, ne se plaint pas, ne demande rien, ils sont droits tous les deux, ils ne cherchent que la vérité et c’est cela qui les a protégés. Il part, Léon, sans doute pour ne pas pleurer, sans comprendre il part.<br>Mathé se sent seul. Pourtant elle devait agir ainsi, elle a aussi envie de pleurer, elle pense au petit mouchoir que Léon lui a demandé de mettre à sa fenêtre si jamais elle revenait sur ses décisions….cela l’obsède et puis&nbsp;! Zut&nbsp;! N’y pense plus, essaie de ne plus y penser. Le soir elle part faire une course, Léon passe sans la regarder mais en l’ignorant complètement….alors tout à coup, elle prend enfin conscience de ce qu’est ce grand garçon pour elle. Ce n ‘est pas seulement celui qui console, celui qui aide, celui qui joue ou qui rit mais Lui, tout simplement celui qu’elle aime, elle est heureuse et triste à la fois, heureuse de prendre conscience d’une si belle découverte, triste de l’avoir fait souffrir..Il reste&nbsp; le petit mouchoir, pourtant Mathé ne la jamais mis à la fenêtre, reste d’amour propre&nbsp;? Mais elle lui a sourit le lendemain, il a compris et en fut heureux.<br></p>
+
+
+
+<p>Des heurts&nbsp;? Bien sur, il y a toujours..Chaque fois que Mathé achète quelque chose, elle craint dorénavant la critique de Léon. Bien sur elle fait mine de ne pas y faire attention, mais dès qu’un détail ne lui plait pas, elle se sent mal à l’aise. Ainsi au début, elle encaissait difficilement la trop grade franchise de Léon qui lui, ne se rendait pas compte que Mathé n’était, mais alors pas du tout certaine d’elle.</p>
+
+
+
+<p><br>Et puis ses mollets, quel fichu complexe…jusqu’à ne pas marcher devant lui, elle préfère se rendre malade que devoir se rendre à la toilette et devoir les trois marches..&nbsp;!! Mon vieux, tu vas en apprendre…enfin Mathé peut toujours<br>…..&nbsp;??</p>
+
+
+
+<p>Mais, toi, avoue, que la vie s’est soudaine compliquée, lorsque son anniversaire approchait et que tout penaud, tu arpentais de haut en bas l’Inno, réservant le rayon mouchoir à Charles&nbsp;! Que peut-on offrir à une jeune fille de bonne famille&nbsp;? Tu regardes, range les pommades, les parfums, tous les produits de beauté …et puis zut, ça ne va pas, je ne tiens pas à voir Mathé déguisée en cocotte….des bas&nbsp;? Est ce que ça se fait&nbsp;? Et puis je n’ai jamais vu qu’elle en portait. Mais quoi&nbsp;! Tu penses à ta sœur, ta maman, qu’aimeraient-elles, un bijou peut être….. Volle gaz, tu suis ton idée et tu te retrouves devant un tas d’objet blinquant, la demoiselle te regarde, tu te sens gêné et en vitesse tu choisis un petit collier blanc, que tu fourres en vitesse dans ta poche…<br>Tu te demandes si tu n’as pas fait une gaffe, si elle aimera, si cela se fait, tu essaies de ne plus te tracasser. Le lendemain, un peu embarrassé, tu lui offres ton cadeau …et elle fut si contente.<br><br></p>
+
+
+
+<p>Et puis il y avait ce Bobby, qui sans se décourager, continuait à faire sa petite cour…Mais ce que j’admire dans ce galant duel, c’est la diplomatie de Mathé.<br>C’était au tout début, elle vous trouvait tous les deux aussi sympathique et à cette époque, encore, entre vous deux, son cœur balançait&nbsp;!&#8230;et le martyr pour toi et Bobby continuait puisque la belle ne s’était pas encore prononcé &nbsp;ou&nbsp; trahie.<br>Donc ce jour, en grande confidence, Bobby le timide, s’avance et dit&nbsp; «&nbsp;Mathé, si c’est moi que tu préfères, demain tu feras ta queue de cheval- promis&nbsp;?&nbsp;» et Léon tenance cet ami qui veut une réponse. Mais quelques heures plus tard c’est toi, Léon, en grande confidence lui demande de laisser ses cheveux longs, toi et tes idées romantiques comme le Grand Maulne…tu désirais une Mathé jeune, naturelle, et un peu bohème. Mais elle, à ce moment, voulait rester la petite gamine effrontée et elle a continué son éternelle coiffure&nbsp;: queue de cheval. Vous étiez vous concerté ce jour là Bobby et toi&nbsp;? Surement que vous aviez préparé ensemble ce rude combat, en amis, qui en avaient assez de cette situation équivoque.<br>C’est ainsi que vos premières rencontres furent parsemées de <em>ponderies </em>d’impertinences et non de taquineries comme sur ce pauvre tram&nbsp;: tu avais entendu son nom, et tant pis tu l’écris sur la vitre du tram en grand&nbsp;: M a t é.<br>T’ as pas eu de chance, tout de suite la riposte est venue sur la vitre d’en face et Mathé écrit elle&nbsp; «&nbsp; Mathé ….et plus loin Léon. Avoue, que ça t’a fait plaisir de voir ton nom à coté du sien. Et oui, à défaut de gros chêne pour y graver vos noms, vous vous serviez des vitres du tram&nbsp;…C’est sans doute mieux car vos noms se sont peut-être effacés, mais vous, vous êtes tous deux restés..<br>Bref ce que je retiens de tout cela c’est que Mathé était bien effrontée de prendre les voyageurs à témoins de ces gentilles gamineries.<br></p>
+
+
+
+<p>Enfin j’en arrive à ce fameux PARIS en 1958. Faut-il te le rappeler Mathé. Si souvent, tu me narres ces mille et un détails, toujours nouveau et il ya de cela … quatre ans déjà. Vacances de troisième, candidate poète, tu pars pour un long voyage en compagnie d’Anne Marie Devlescower, tout un long mois, tu seras loin. Cependant l’aventure en vaut la peine, Léon comprend, bien sur, et tu traite ton papa de loufoque lorsqu’il insinue que ton cher ami ne peut pas&nbsp; aller te rejoindre&nbsp;!!<br>Parole, tu étais sincère, bref, te voilà dans le train, non je me trompe, tu pars avec les parents d’Anne Marie qui vous installent dans vos chambres et partent après leurs dernières recommandations&nbsp;«ne pas sortit trop tard le soir, seules »<br>«&nbsp;Bien profiter des cours, veuillez à ne pas perdre votre argent, visitez le Louvre, profitez d’un théâtre ou deux, et surtout se méfier des jeunes gens trop entreprenants… enfin, bon séjour..Promis&nbsp;?&nbsp;» Au revoir&nbsp;! ! Au revoir, les baisers et les portières qui claquent, les mains et les mouchoirs s’agitent, larmes à l’œil, sourire aux lèvres, départ en règle.</p>
+
+
+
+<p>Votre vie de pensionnaires en liberté te ravit, Paris t’étonne et t’enthousiaste son air gamin, son esprit pétillant, sa franchise et sa simplicité ont vite fait de te mettre à l’aise. Un seul regret «&nbsp;si Léon était là&nbsp;».<br>Et boum&nbsp;! Le miracle s’accomplit, tu n’en crois pas tes yeux, tu es myope, on le sait, ces deux là ressemblent tellement à Léon et Jean Charles son cousin…Une envie folle te prend de demander au bras de Joseph, appuyé négligemment sur ton épaule, de te pincer, tu n’attends pas la réponse et tu voles vers eux, Léon respire…enfin tu arrives et tu as l’air très heureuse de sa présence.</p>
+
+
+
+<p>Inscrire les jours heureux de Paris, c’est impossible. Mathé tu as vécu un rêve&nbsp; avec Léon à tes cotés&nbsp;? Comment peut-on raconter l’histoire d’un rêve&nbsp; sans le matérialiser. Vous n’allez plus vous y retrouver, ni le Paris que vous avez ensemble découvert. Tant pis au risque de décevoir Madame, Joséphine laisse courir son imagination en priant Dieu qu’il veuille en faire votre réalité…&nbsp;!!<br></p>
+
+
+
+<p>Bon, dès l’instant ou tu as réalisé que Léon était là pour deux jours, tu l’as pris par la main, et tu as marché, marché le long de la Seine, dans les jardins, tu voulais tout voir avec lui sauf les métros et les restaurants, d’ailleurs vous ne pensiez même pas à manger. Toute la journée vous avez folâtré ensembles près des boutiques, des marchands de fleurs, et toujours la Seine qui surgit, des petits ponts, de grandes avenues, des parcs très bien taillés, des fleurs, c’est l’été, et deux jeunes amoureux, qui ensemble dans une ville de rêve, un petit banc qui fait un clin d’œil en vous permettant de ne rien dire, soleil taquin qui perce vos petits secrets, et puis du monde, du monde aux visages heureux et sympa. Vous courez, d’un coin à l’autre, infatigable. La tour Eifel a l’honneur de votre visite, course dans l’escalier et de là haut les immeubles vous penser aux baignoires de théâtre…<br>Le soir, cinéma, là, &nbsp;enfants terribles, je ne vous félicite pas de votre choix, le film était pour le moins à proscrire et Mathé fut gênée de la crudité des images, ironie du sort.<br>Puis vous êtes passés dans le coin de Saint Germain des prés, admirant les pancartes lumineuses, la jeunesse moderne et tapageuse, les souvenirs de Toulouse Lautrec.<br>La fatigue commence à vous faire signe du doigt, vos pieds sont lourds, le marchand de sable passe «Ou dors tu Léon&nbsp;?&nbsp;». Ou veux tu dormir à Paris, si ce n’st sous les ponts de la Seine,…Mathé s’émeut, mais elle ne peut quand même pas l’introduire dans sa chambre, donc… C’est décidé et Mathé n’a qu’a avoir honte de son lit douillet.<br>«&nbsp;Demain matin, viens à ma rencontre très tôt&nbsp;» lui dit Mathé en guise de bonsoirs (entre autres..).<br>Deuxième jour de gloire. Mathé part à la rencontre de son clochard, longe la Seine, longtemps, retrouve le lieu ou il devait dormir mais personne…la crainte monte en elle&nbsp;? Se peut il qu’il soit au bureau de police pour vagabondage, aurait il eu des difficultés avec des ivrognes, fous qu’ils ont été tout deux de croire que Paris la nuit leur était réservé, de se croire encore au Moyen Age ou la vie à la belle étoile était permise. Le XXIème siècle a des raisons que le cœur ne connait pas…que faire, si cette aventure doit parvenir aux parents, jamais plus la vie sera possible..Elle tremble enfin Mathé, oui devant votre audace.<br>Avoue, Mathé, qu’à cet instant tu as tremblé.<br>Mais ces vacances parisiennes devaient être merveilleuses jusqu’à la fin et le ciel vous protégeait car.. Loin, loin de l’autre coté du pont, &nbsp;Léon apparait, apparait c’est le mot, il a l’air fatigué et te raconte mi-rieur, mi-penaud qu’il s’est tout bonnement trompé de rive&nbsp; et tu cherchais là ou tu ne pouvais pas être. Assez de temps perdu, Paris est éveillé depuis longtemps, la course folle reprend tel des cerfs volants, vous sautez d’un endroit à l’autre pour profiter de ce dernier délai accordé à votre amour. Aucune ombre, aucun nuage, ce jour là ne s’est montré, vous goutiez simplement de la joie d’être ensemble. Versailles s’est senti rajeunir en vous voyant arriver, les fleurs vous saluaient, les oiseaux vous taquinaient, les arbres vous faisaient des grands signes, tout était en fête en votre honneur, vous en êtes vous aperçus&nbsp;?Pourtant le départ approche, et une boule au fond de la gorge, tu l’accompagne sur la grand route, non il ne faut pas pleurer, vous êtes sortis de la&nbsp; vie réelle pendant deux jours, mais la vie a encore besoin de chacun de vous et elle vous appelle tout doucement et si gentiment qu’il ne faut pas refuser. Ils repartent tous deux en souriant crânement et puis tu te sens si seule malgré Anne Marie.<br>Il reste de cet heureux séjour un hommage à rendre à Jean Charles qui est resté dans l’ombre, qui a risqué sans discuter, qui a peut être souffert plus de sa solitude en vous voyant heureux, qui ne s’est jamais plaint, c’est lui qui vous a donné ces deux jours plein de rêve, il ne faut jamais l’oublier. Car pour être capable de cela, il faut beaucoup de cran et une grande amitié.<br>Le retour fut rapide, nuit passée dans un bois, et au petit matin une auto s’arrête alors que Léon était encore en chemisette.<br>Arrêt néfaste à Maubeuge ou Léon s’est souvenu avec amertume du bras de Joseph,&nbsp; il ne connaissait pas Paris et sa grande camaraderie, il a eu mal.. et tu sais maintenant parce que tu as attendu en vain une lettre.<br>Vous avez mis les choses au point tous deux..Léon t’a avoué par écrit qu’il avait joué au blasé à Maubeuge, il le regrette, et te demande si tu lui pardonnes. Pendant que tu lisais, pour ne pas t’influencer il est sorti, sans doute avait-il trop mal, mais toi Mathé, tu as tellement bien agi en ouvrant simplement la porte pur lui dire que tu oubliais, en te montrant si compréhensive et en refoulant ton amour propre tu as fait rejaillir plus grand encore votre profond amour et l’éternel souvenir de Paris..Heureux. Je crois avoir lu quelque part «&nbsp; L’amour pour vivre doit peut être arrosé de larmes..C’est vrai car s’il ne renait continuellement il risque de se dessécher&nbsp;»</p>
+
+
+
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pardon, Mathé, si j’arrête là votre histoire, la nôtre aussi puisque selon toi, le titre est faux.<br>On ne peut mener de front une grande amitié avec un profond amour, je ne pouvais faire vivre votre histoire sans y mêler la mienne. Notre amitié empiétait sur ton amour, or il est tellement beau que je ne puis que&nbsp; m’incliner…qu’il vive donc, qu’il grandisse encore et qu’il soit rayonnant, voilà mon grand souhait en ce jour de tes vingt et ans. Quant à moi, je suis heureuse, et comme le renard, j’ai beaucoup&nbsp; gagné même si de temps en temps je pleure…</em></p>
+
+
+
+<p><br><strong>Françoise resta la grande amie de Mathé et elle nous quitta beaucoup trop tôt.<br>Elle fut notre témoin de mariage et la marraine de notre premier enfant, Roland. Elle nous manque énormément.</strong><br><br><br></p>
+
+
+
+<h1 class="wp-block-heading">Suite&#8212;&gt;<a href="../francoise/index.html">Françoise</a></h1>
+<div id="jp-post-flair" class="sharedaddy sharedaddy-dark sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Partager&nbsp;:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-2896" class="share-twitter sd-button share-icon" href="index9a7b.html?share=twitter" target="_blank" title="Cliquez pour partager sur Twitter" ><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-2896" class="share-facebook sd-button share-icon" href="index5a58.html?share=facebook" target="_blank" title="Cliquez pour partager sur Facebook" ><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-133488904-2896-64987194cd4b6' data-src='//widgets.wp.com/likes/index.html?ver=20230309#blog_id=133488904&amp;post_id=2896&amp;origin=leonetmathe.wordpress.com&amp;obj_id=133488904-2896-64987194cd4b6&amp;domain=leonmathe.com' data-name='like-post-frame-133488904-2896-64987194cd4b6' data-title='Aimer ou rebloguer'><h3 class='sd-title'>J’aime ça :</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>J’aime</span></span> <span class="loading">chargement&hellip;</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+			<div id="sidebar" class="sidebar">
+		<div id="sidebar-inner" class="sidebar-inner">
+
+					<nav class="main-navigation" role="navigation">
+				<h2 class="menu-heading widget-title">Menu</h2>
+				<div class="menu-primary-container"><ul id="menu-primary-1" class="nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../accueil/index.html">Année 1956</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2542"><a href="../mathe/index.html">Mathé</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-49"><a href="../notre-jeunesse/index.html">Nos débuts</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-241"><a href="../le-tram-8/index.html">Le tram 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="../mamy/index.html">Mamy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="../moise-sauvee-des-eaux/index.html">Moïse sauvée des eaux</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="../ldelesennegmailcom/index.html">Escapade à Paris</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200"><a href="../la-ferme-de-courriere/index.html">La ferme de Courrière</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1299"><a href="../nos-soirees/index.html">Nos soirées</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2816"><a href="../notre-mariage/index.html">Notre mariage</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-206"><a href="../nos-enfants/index.html">Nos enfants</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2075"><a href="../roland/index.html">Roland</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2103"><a href="../ldelesennegmailcom-2/index.html">Catherine</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1466"><a href="../la-famille/index.html">La famille</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1467"><a href="../ma-belle-soeur/index.html">Ma belle sœur</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1594"><a href="../mes-neveux-et-nieces/index.html">Mes neveux et nièces.</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2962"><a href="../2023/01/04/les-romainville/index.html">Les Romainville</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2245"><a href="../les-wauthy/index.html">Les Wauthy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2277"><a href="../les-delesenne/index.html">Les Delesenne</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415"><a href="../les-everaert/index.html">Les Everaert</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2434"><a href="../les-desmanet/index.html">Les Desmanet</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-235"><a href="../nos-amis/index.html">Nos amis</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1974"><a href="../francoise/index.html">Françoise</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213"><a href="../nos-amis-charles-et-francoise/index.html">Charles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="../claire-et-rene/index.html">Claire et René</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../michel-et-michele/index.html">Michel et Michèle</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2383"><a href="../jp-vuylsteke/index.html">JP.Vuylsteke</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="../nos-visiteurs/index.html">WK souvenirs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1230"><a href="../le-gers-2/index.html">Le GERS</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1514"><a href="../les-branet/index.html">Les Branet</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1712"><a href="../nos-voisins/index.html">Les Bergouts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2989"><a href="../les-laberou/index.html">Les Laberou</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1593"><a href="../notre-gersification/index.html">Notre Gersification</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="../ball-trap-du-quinze-aout/index.html">Ball Trap du quinze août</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2219"><a href="../2017/12/24/ldelesennegmailcom-mai-2000/index.html">1 Mai 2000</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48"><a href="../nos-maisons/index.html">Nos maisons</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214"><a href="../de-farcienne-a-miramont-d-astarac/index.html">de Farcienne à Miramont d’ Astarac</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-209"><a href="../nos-hobby/index.html">Nos hobby</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="../ma-genealogie/index.html">Ma généalogie</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="../le-golf-dembats/index.html">Le Golf d’Embats</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="../patchwork/index.html">Patchwork</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2555"><a href="../__trashed-3/index.html">Nos animaux</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-239"><a href="../nos-jobs/index.html">Nos jobs</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-218"><a href="../mon-parcours/index.html">Mes jobs</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2025"><a href="../charbonnage/index.html">Charbonnage</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2037"><a href="../bertrand-faure-plastique-belgique/index.html">Bertrand Faure Plastique Belgique</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2036"><a href="../sibf/index.html">SIBF</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2052"><a href="../faurecia/index.html">Faurecia</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a href="../la-pharmacie-de-mathe/index.html">La pharmacie de Mathe</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2952"><a href="../poteries-de-bouffioulx/index.html">POTERIES de BOUFFIOULX</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="../notre-poterie/index.html">La poterie Crame Camberlin</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2953"><a href="../les-crame-potiers/index.html">Les  Potiers Crame</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-227"><a href="../contact/index.html">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="../a-propos/index.html">À propos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1935"><a href="../blog/index.html">BLOG</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2771"><a href="../2022/12/29/retour-aux-sources-belgique-septembre-2022/index.html">Retour aux sources  : Belgique septembre 2022</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2220"><a href="../2017/08/20/ldelesennegmailcomla-maladie-de-mathe/index.html">La maladie de Mathé : AMS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2222"><a href="../indexb82b.html?p=934">Les mémoires de Louise Romainville</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2217"><a href="../2017/11/03/ldelesennegmailcom-3/index.html">Mon MacIntosh</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2957"><a href="../2018/02/03/clea/index.html">Cléa</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-2218"><a href="../2017/10/28/ldelesennegmailcom-2/index.html">Mon jardin.</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2486"><a href="../2020/07/30/blog/index.html">Cloture du jardin.</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></div>			</nav><!-- .main-navigation -->
+		
+		
+					<div id="secondary" class="widget-area" role="complementary">
+				<aside id="media_gallery-10" class="widget widget_media_gallery"><h2 class="widget-title">Evolution Mathé</h2><p class="jetpack-slideshow-noscript robots-nocontent">Ce diaporama nécessite JavaScript.</p><div id="gallery-2896-1-slideshow" class="jetpack-slideshow-window jetpack-slideshow jetpack-slideshow-black" data-trans="fade" data-autostart="1" data-gallery="[{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1955-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1866&quot;,&quot;title&quot;:&quot;1955 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1955-32.jpg?w=264&quot;,&quot;id&quot;:&quot;1867&quot;,&quot;title&quot;:&quot;1955 (3)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19552.jpg?w=496&quot;,&quot;id&quot;:&quot;1868&quot;,&quot;title&quot;:&quot;1955&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19562.jpg?w=833&quot;,&quot;id&quot;:&quot;1869&quot;,&quot;title&quot;:&quot;1956&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19582.jpg?w=833&quot;,&quot;id&quot;:&quot;1870&quot;,&quot;title&quot;:&quot;1958&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1958bis2.jpg?w=833&quot;,&quot;id&quot;:&quot;1871&quot;,&quot;title&quot;:&quot;1958bis&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19592.jpg?w=833&quot;,&quot;id&quot;:&quot;1872&quot;,&quot;title&quot;:&quot;1959&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19612.jpg?w=833&quot;,&quot;id&quot;:&quot;1873&quot;,&quot;title&quot;:&quot;1961&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19622.jpg?w=833&quot;,&quot;id&quot;:&quot;1874&quot;,&quot;title&quot;:&quot;1962&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1963bis-fileminimizer1.jpg?w=640&quot;,&quot;id&quot;:&quot;1875&quot;,&quot;title&quot;:&quot;1963bis (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1963bis2.jpg?w=716&quot;,&quot;id&quot;:&quot;1876&quot;,&quot;title&quot;:&quot;1963bis&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1964-fileminimizer1.jpg?w=640&quot;,&quot;id&quot;:&quot;1877&quot;,&quot;title&quot;:&quot;1964 (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19642.jpg?w=833&quot;,&quot;id&quot;:&quot;1878&quot;,&quot;title&quot;:&quot;1964&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19652.jpg?w=833&quot;,&quot;id&quot;:&quot;1879&quot;,&quot;title&quot;:&quot;1965&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19662.jpg?w=689&quot;,&quot;id&quot;:&quot;1880&quot;,&quot;title&quot;:&quot;1966&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1970-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1881&quot;,&quot;title&quot;:&quot;1970 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19702.jpg?w=833&quot;,&quot;id&quot;:&quot;1882&quot;,&quot;title&quot;:&quot;1970&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1974-fileminimizer1.jpg?w=640&quot;,&quot;id&quot;:&quot;1883&quot;,&quot;title&quot;:&quot;1974 (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19742.jpg?w=833&quot;,&quot;id&quot;:&quot;1884&quot;,&quot;title&quot;:&quot;1974&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1974bis-fileminimizer1.jpg?w=640&quot;,&quot;id&quot;:&quot;1885&quot;,&quot;title&quot;:&quot;1974bis (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1974bis2.jpg?w=720&quot;,&quot;id&quot;:&quot;1886&quot;,&quot;title&quot;:&quot;1974bis&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19782.jpg?w=335&quot;,&quot;id&quot;:&quot;1887&quot;,&quot;title&quot;:&quot;1978&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/1980-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1888&quot;,&quot;title&quot;:&quot;1980 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19802.jpg?w=833&quot;,&quot;id&quot;:&quot;1889&quot;,&quot;title&quot;:&quot;1980&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19852.jpg?w=833&quot;,&quot;id&quot;:&quot;1890&quot;,&quot;title&quot;:&quot;1985&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19862.jpg?w=320&quot;,&quot;id&quot;:&quot;1891&quot;,&quot;title&quot;:&quot;1986&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19882.jpg?w=833&quot;,&quot;id&quot;:&quot;1892&quot;,&quot;title&quot;:&quot;1988&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19892.jpg?w=624&quot;,&quot;id&quot;:&quot;1893&quot;,&quot;title&quot;:&quot;1989&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19902.jpg?w=833&quot;,&quot;id&quot;:&quot;1894&quot;,&quot;title&quot;:&quot;1990&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/19922.jpg?w=833&quot;,&quot;id&quot;:&quot;1895&quot;,&quot;title&quot;:&quot;1992&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20022.jpg?w=833&quot;,&quot;id&quot;:&quot;1896&quot;,&quot;title&quot;:&quot;2002&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2002bis2.jpg?w=833&quot;,&quot;id&quot;:&quot;1897&quot;,&quot;title&quot;:&quot;2002bis&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20032.jpg?w=833&quot;,&quot;id&quot;:&quot;1898&quot;,&quot;title&quot;:&quot;2003&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20042.jpg?w=833&quot;,&quot;id&quot;:&quot;1899&quot;,&quot;title&quot;:&quot;2004&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2004bis-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1900&quot;,&quot;title&quot;:&quot;2004bis (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2004bis2.jpg?w=833&quot;,&quot;id&quot;:&quot;1901&quot;,&quot;title&quot;:&quot;2004bis&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20052.jpg?w=833&quot;,&quot;id&quot;:&quot;1902&quot;,&quot;title&quot;:&quot;2005&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2007-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1903&quot;,&quot;title&quot;:&quot;2007 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20072.jpg?w=833&quot;,&quot;id&quot;:&quot;1904&quot;,&quot;title&quot;:&quot;2007&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2008-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1905&quot;,&quot;title&quot;:&quot;2008 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2008-32.jpg?w=833&quot;,&quot;id&quot;:&quot;1906&quot;,&quot;title&quot;:&quot;2008 (3)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20082.jpg?w=833&quot;,&quot;id&quot;:&quot;1907&quot;,&quot;title&quot;:&quot;2008&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2009-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1908&quot;,&quot;title&quot;:&quot;2009 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2009-32.jpg?w=833&quot;,&quot;id&quot;:&quot;1909&quot;,&quot;title&quot;:&quot;2009 (3)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20092.jpg?w=833&quot;,&quot;id&quot;:&quot;1910&quot;,&quot;title&quot;:&quot;2009&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2010-2-fileminimizer1.jpg?w=640&quot;,&quot;id&quot;:&quot;1911&quot;,&quot;title&quot;:&quot;2010 (2) (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2010-22.jpg?w=833&quot;,&quot;id&quot;:&quot;1912&quot;,&quot;title&quot;:&quot;2010 (2)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20102.jpg?w=833&quot;,&quot;id&quot;:&quot;1913&quot;,&quot;title&quot;:&quot;2010&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20112.jpg?w=833&quot;,&quot;id&quot;:&quot;1914&quot;,&quot;title&quot;:&quot;2011&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20122.jpg?w=833&quot;,&quot;id&quot;:&quot;1915&quot;,&quot;title&quot;:&quot;2012&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2013-fileminimizer1.jpg?w=720&quot;,&quot;id&quot;:&quot;1916&quot;,&quot;title&quot;:&quot;2013 (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20132.jpg?w=833&quot;,&quot;id&quot;:&quot;1917&quot;,&quot;title&quot;:&quot;2013&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20142.jpg?w=833&quot;,&quot;id&quot;:&quot;1918&quot;,&quot;title&quot;:&quot;2014&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2015-fileminimizer1.jpg?w=833&quot;,&quot;id&quot;:&quot;1919&quot;,&quot;title&quot;:&quot;2015 (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20152.jpg?w=833&quot;,&quot;id&quot;:&quot;1920&quot;,&quot;title&quot;:&quot;2015&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/2016-fileminimizer1.jpg?w=833&quot;,&quot;id&quot;:&quot;1921&quot;,&quot;title&quot;:&quot;2016 (FILEminimizer)&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;},{&quot;src&quot;:&quot;https:\/\/leonetmathe.files.wordpress.com\/2017\/08\/20162.jpg?w=833&quot;,&quot;id&quot;:&quot;1922&quot;,&quot;title&quot;:&quot;2016&quot;,&quot;alt&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;itemprop&quot;:&quot;image&quot;}]" itemscope itemtype="https://schema.org/ImageGallery"></div></aside><aside id="blog-stats-3" class="widget widget_blog-stats"><h2 class="widget-title">Statistiques du blog</h2>		<ul>
+			<li>13&nbsp;211 hits</li>
+		</ul>
+		</aside><aside id="follow_button_widget-5" class="widget widget_follow_button_widget">
+		<a class="wordpress-follow-button" href="../index.html" data-blog="133488904" data-lang="fr" >Follow Notre Histoire on WordPress.com</a>
+		<script type="text/javascript">(function(d){ window.wpcomPlatform = {"titles":{"timelines":"Fils d\u2019actualit\u00e9 int\u00e9grables","followButton":"Bouton S\u2019abonner","wpEmbeds":"Int\u00e9grations WordPress"}}; var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');p.type = 'text/javascript';p.async = true;p.src = '../../widgets.wp.com/platform.js';f.parentNode.insertBefore(p,f);}(document));</script>
+
+		</aside>			</div><!-- .widget-area -->
+		
+		</div>
+	</div><!-- .sidebar -->
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Propulsé par WordPress.com.</a>
+			
+					</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+</div><!-- .site -->
+
+<!--  -->
+<script src='../../0.gravatar.com/js/gprofiles734a.js?ver=202325a38e82b72ca7b7f7489a6e0d2e13bda8e1ecaa4ef340fc6b01754378626ee67e' id='grofiles-cards-js'></script>
+<script id='wpgroho-js-extra'>
+var WPGroHo = {"my_hash":""};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='../../s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgrohoe8bd.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-pub-afterlight actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="#">
+			<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg><span>Suivre</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="#">
+			<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.89V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.095 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg><span>Abonné∙e</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="../index.html">
+				<img alt='' src='../../leonetmathe.files.wordpress.com/2017/08/cropped-1961ae05.jpg?w=50' class='avatar avatar-50' height='50' width='50' />				Notre Histoire			</a>
+		</li>
+										<form method="post" action="https://subscribe.wordpress.com/" accept-charset="utf-8" style="display: none;">
+																				<div>
+										<input type="email" name="email" placeholder="Entrez votre adresse e-mail" class="actnbr-email-field" aria-label="Entrez votre adresse e-mail" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="133488904" />
+										<input type="hidden" name="source" value="index.html" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="486803a3ce" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="M’inscrire">
+												M’inscrire											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Vous disposez déjà dʼun compte WordPress ? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fleonmathe.com%252Fle-roman-de-francoise%252F">Connectez-vous maintenant.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="../index.html">
+				<img alt='' src='../../leonetmathe.files.wordpress.com/2017/08/cropped-1961ae05.jpg?w=50' class='avatar avatar-50' height='50' width='50' />				Notre Histoire			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://leonetmathe.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fleonetmathe.wordpress.com%2Fle-roman-de-francoise%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Personnaliser</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="#">
+			<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg><span>Suivre</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="#">
+			<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.89V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.095 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg><span>Abonné∙e</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">S’inscrire</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fleonmathe.com%252Fle-roman-de-francoise%252F">Connexion</a></li>
+																	<li class="actnbr-shortlink"><a href="https://wp.me/P926yQ-KI">Copier shortlink</a></li>
+																	<li class="flb-report">
+										<a href="http://en.wordpress.com/abuse/?report_url=https://leonmathe.com/le-roman-de-francoise/" target="_blank">
+											Signaler ce contenu										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/blogs/133488904/posts/2896">
+											Voir l’article dans le Lecteur										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Gérer les abonnements</a>
+									</li>
+																		<li class="actnbr-fold"><a href="#">Réduire cette barre</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "../../s0.wp.com/wp-content/mu-plugins/actionbar/actionbar2866.css?v=20210915";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "../../s0.wp.com/wp-content/mu-plugins/actionbar/actionbarb516.js?v=20220329";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+	
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/leonmathe.com\/le-roman-de-francoise\/":2896};
+	</script>
+						<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div
+				class="jp-carousel-wrap swiper-container jp-carousel-swiper-container jp-carousel-transitions"
+				itemscope
+				itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"/>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"/>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Activer la visibilité des métadonnées sur les photos">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Activer la visibilité des commentaires sur les photos">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="Cette image comporte des commentaires."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Chargement des commentaires&hellip;</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Écrire un commentaire...</label>
+												<textarea
+													name="comment"
+													class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+													id="jp-carousel-comment-form-comment-field"
+													placeholder="Écrire un commentaire..."
+												></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">E-mail (requis)</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Nom (requis)</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Site web</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" />
+															</fieldset>
+																											</div>
+													<input
+														type="submit"
+														name="submit"
+														class="jp-carousel-comment-form-button"
+														id="jp-carousel-comment-form-button-submit"
+														value="Laisser un commentaire" />
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"/>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??-eJylj9EOwiAMRX9I7HjY4ovxW4BVxoSWUMh+f1viFuOjvrXn9p6ksGTlmCpSBRvZqxybDyTgw7MG8soaIizg5BtdN3SBj3pqZ3nGmo17vXeQRpB4bBEFnCncBCPIEjIWZRuNEf+VHTcH+NEnE5fqeNzV28MSwzZOvKgz2MWPdNfDrde674ZuXgGlUnnN&amp;cssminify=yes' type='text/css' media='all' />
+<script id='comment-like-js-extra'>
+var comment_like_text = {"loading":"chargement\u2026","swipeUrl":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/comment-likes\/js\/lib\/swipe.js?ver=20131008"};
+</script>
+<script id='afterlight-script-js-extra'>
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">ouvrir le sous-menu<\/span>","collapse":"<span class=\"screen-reader-text\">fermer le sous-menu<\/span>"};
+var toggleButtonText = {"menu":"Menu","widgets":"Widgets","both":"Menu & Widgets"};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??-eJyFjtsOwiAQRH9IJEbj5cH4LRWWdltYEHar/r14iTEa9XXmnMzoY1ImEgOx7ou2MKKBdJr2ZaJfqiAqeWmRivY4QNEHAYGuIesh/4BNDKFG6i71b8G7yB2EiiXZ68YxZI9td7tVBkxVoUG5aKQohx8Pv7pOyDBGeq4hGS/2fsdiYT0C2ZivVYr+7ND7ykDmaUD6J2VoobINx6yyEGOAh7YL29lyPV9vVov5sr8A5mSGcQ=='></script>
+<script src='../../s2.wp.com/wp-content/plugins/gutenberg-core/v16.0.0/build/vendors/inert-polyfill.min3e32.js?m=1686787612i&amp;ver=6.2.1-RC1-55769' id='wp-inert-polyfill-js'></script>
+<script crossorigin='anonymous' type='text/javascript' src='../../s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill.mindd4a.js?m=1666876734i'></script>
+<script crossorigin='anonymous' src='../../s0.wp.com/wp-content/plugins/gutenberg-core/v16.0.0/build/hooks/index.minbdbc.js?m=1686787612i&amp;ver=3aee234ea7807d8d70bc' id='wp-hooks-js'></script>
+<script crossorigin='anonymous' src='../../s0.wp.com/wp-content/plugins/gutenberg-core/v16.0.0/build/i18n/index.min2da0.js?m=1686787612i&amp;ver=5baa98e4345eccc97e24' id='wp-i18n-js'></script>
+<script id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id='gifting-banner-js-extra'>
+var gifting_banner = {"dismiss_days_count":"365","checkout_link":"https:\/\/wordpress.com\/checkout\/value_bundle\/gift\/8634842?cancel_to=\/home","more_info_link":"https:\/\/wordpress.com\/support\/gift-a-wordpress-com-subscription\/","i18n":{"title":"Vous appr\u00e9ciez ce site\u00a0?","subtitle":"Offrez un plan WordPress.com \u00e0 l\u2019auteur.","button_text":"Offrir"}};
+</script>
+<script id='jetpack-carousel-js-extra'>
+var jetpackSwiperLibraryPath = {"url":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/_inc\/build\/carousel\/swiper-bundle.min.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"fr","ajaxurl":"https:\/\/leonmathe.com\/wp-admin\/admin-ajax.php","nonce":"7f88a1e3d7","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Commentaire","post_comment":"Laisser un commentaire","write_comment":"\u00c9crire un commentaire...","loading_comments":"Chargement des commentaires\u2026","download_original":"Afficher dans sa taille r\u00e9elle <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>.","no_comment_text":"Veuillez ajouter du contenu \u00e0 votre commentaire.","no_comment_email":"Merci de renseigner une adresse e-mail.","no_comment_author":"Merci de renseigner votre nom.","comment_post_error":"Une erreur s\u2019est produite \u00e0 la publication de votre commentaire. Veuillez nous en excuser, et r\u00e9essayer dans quelques instants.","comment_approved":"Votre commentaire a \u00e9t\u00e9 approuv\u00e9.","comment_unapproved":"Votre commentaire est en attente de validation.","camera":"Appareil photo","aperture":"Ouverture","shutter_speed":"Vitesse d\u2019obturation","focal_length":"Focale","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/leonetmathe.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fleonmathe.com%2Fle-roman-de-francoise%2F","blog_id":"133488904","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"stats_query_args":"blog=133488904&v=wpcom&tz=1&user_id=0&subd=leonetmathe","is_public":"1"};
+</script>
+<script id='jetpack-slideshow-js-extra'>
+var jetpackSlideshowSettings = {"spinner":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/modules\/shortcodes\/img\/slideshow-loader.gif","speed":"4000","label_prev":"Diapositive pr\u00e9c\u00e9dente","label_stop":"Mettre le diaporama en pause","label_next":"Diapositive suivante","blog_id":"133488904","blog_subdomain":"leonetmathe","user_id":"0"};
+</script>
+<script id='sharing-js-js-extra'>
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/_static/??-eJylkM0KwjAQhF/IdFFb0YP4KJImMSYmuzU/lL69QWypvUjxNjPsfCwDfccEYVKYoHWkWeeyNhhBm1syqFnLEVUAu0wqGzcwK/s8Va1KHRePj4eYEa4GBbTZOAmCB8pRuelsDCpvcB3Vk8xORYh3CkmQLLL8aZ9ZhaESg3BqPXP26Tc2OlPUnXo25X/SeVCSSzm8ZVn2B27cifWdIL+wpXfx5+3h2DR1vd+d7AuA1bJI'></script>
+<script type='text/javascript'>
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='../wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<iframe src='https://widgets.wp.com/likes/master.html?ver=20230309#ver=20230309&amp;lang=fr&amp;lang_ver=1687565359&amp;origin=https://leonmathe.com' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars'>
+		<div class="likes-text">
+			<span>%d</span> blogueurs aiment cette page :		</div>
+		<ul class="wpl-avatars sd-like-gravatars"></ul>
+	</div>
+
+		<script src="../../stats.wp.com/w03af.js?63" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'133488904','blog_tz':'1','user_lang':'fr','blog_lang':'fr','user_id':'0'}]);
+_stq.push(['view', {'blog':'133488904','v':'wpcom','tz':'1','user_id':'0','post':'2896','subd':'leonetmathe'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mNzc2NTVTamdsd0xoLz9RQkM2K298TXY9bERQMXc2MjhEaVZfb2wwakRoSj0mUkp1THptM1NdbkV1WjZIcU9mVWQmPUIvMlN6Jk8wW3NYVEJ3dWZOWExuWD9UdUNFK1pOMk1teGpoNS9QWnZTLU5GTkthbUslXVh6JURPS3Y/W1UwS2dRLXB0LTEmYllnP3prRUJSbCZtekFOZFo9NVJGLW5hJjdjYT9Tc2UtQXprVV1bamRmR1ZdW28sLkxhTEJ0cmpaajhtV01lWkRraUpHNnBWdSt5YjZOV1ZCTk5oaFFLVlF2MS52WndSUmZddGU0Z3ArckE4S3hELDRlWk1SRSt0eFNBJnZrbnhybXNteHAuXWV8XyU4RlF6NDBGYXFQQ28uUSVJVyZa'}]);
+_stq.push([ 'clickTrackerInit', '133488904', '2896' ]);
+	</script>
+<noscript><img src="../../pixel.wp.com/b0b80.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></body>
+
+<!-- Mirrored from leonmathe.com/le-roman-de-francoise/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Jun 2023 16:57:58 GMT -->
+</html>
